@@ -1,0 +1,72 @@
+{
+  "run": "maturity_effv2b0",
+  "temperature": 0.5358,
+  "val": {
+    "nll_before": 0.2056,
+    "nll_after": 0.1366,
+    "ece_before": 0.1041,
+    "ece_after": 0.0262
+  },
+  "test": {
+    "accuracy": 0.6782,
+    "nll_before": 0.8814,
+    "nll_after": 1.291,
+    "ece_before": 0.1355,
+    "ece_after": 0.2365
+  },
+  "review": {
+    "target_accuracy": 0.99,
+    "threshold": 0.9527,
+    "test_coverage": 0.6566,
+    "test_accuracy_on_accepted": 0.8125,
+    "test_sent_to_review": 159,
+    "n_test": 463
+  },
+  "test_coverage_curve": [
+    {
+      "threshold": 0.0,
+      "coverage": 1.0,
+      "accuracy": 0.6782
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.972,
+      "accuracy": 0.6822
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.94,
+      "accuracy": 0.6897
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.881,
+      "accuracy": 0.7181
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.825,
+      "accuracy": 0.7461
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.795,
+      "accuracy": 0.7582
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.732,
+      "accuracy": 0.7906
+    },
+    {
+      "threshold": 0.95,
+      "coverage": 0.667,
+      "accuracy": 0.8026
+    },
+    {
+      "threshold": 0.98,
+      "coverage": 0.562,
+      "accuracy": 0.8462
+    }
+  ]
+}

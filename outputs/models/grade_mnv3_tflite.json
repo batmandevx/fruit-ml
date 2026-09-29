@@ -1,0 +1,9 @@
+{
+  "run": "grade_mnv3",
+  "tflite_mb": 6.0,
+  "keras_mb": 36.36,
+  "n_checked": 200,
+  "top1_agreement": 1.0,
+  "max_prob_diff": 0.013,
+  "cpu_latency_ms_median": 13.8
+}

@@ -1,0 +1,118 @@
+{
+  "mean_by_grade": {
+    "('Gajar', 'Grade-1')": {
+      "crack_pct": 0.007,
+      "black_spot_pct": 0.008,
+      "insect_hole_pct": 0.011,
+      "sunburn_pct": 0.0,
+      "mold_pct": 0.105,
+      "total_defect_pct": 0.132,
+      "sugar_spot_pct": 1.101,
+      "wrinkle_index": 0.076,
+      "gloss_index": 0.129,
+      "color_uniformity": 0.403
+    },
+    "('Gajar', 'Grade-2')": {
+      "crack_pct": 0.033,
+      "black_spot_pct": 0.056,
+      "insect_hole_pct": 0.043,
+      "sunburn_pct": 0.0,
+      "mold_pct": 0.042,
+      "total_defect_pct": 0.175,
+      "sugar_spot_pct": 1.147,
+      "wrinkle_index": 0.075,
+      "gloss_index": 0.058,
+      "color_uniformity": 0.402
+    },
+    "('Gajar', 'Grade-3')": {
+      "crack_pct": 0.157,
+      "black_spot_pct": 0.259,
+      "insect_hole_pct": 0.186,
+      "sunburn_pct": 0.0,
+      "mold_pct": 0.068,
+      "total_defect_pct": 0.67,
+      "sugar_spot_pct": 1.19,
+      "wrinkle_index": 0.061,
+      "gloss_index": 0.024,
+      "color_uniformity": 0.402
+    },
+    "('Kupro', 'Grade-1')": {
+      "crack_pct": 0.009,
+      "black_spot_pct": 0.006,
+      "insect_hole_pct": 0.003,
+      "sunburn_pct": 0.014,
+      "mold_pct": 1.586,
+      "total_defect_pct": 1.618,
+      "sugar_spot_pct": 0.966,
+      "wrinkle_index": 0.049,
+      "gloss_index": 0.511,
+      "color_uniformity": 0.384
+    },
+    "('Kupro', 'Grade-2')": {
+      "crack_pct": 0.007,
+      "black_spot_pct": 0.004,
+      "insect_hole_pct": 0.003,
+      "sunburn_pct": 0.0,
+      "mold_pct": 1.084,
+      "total_defect_pct": 1.099,
+      "sugar_spot_pct": 1.207,
+      "wrinkle_index": 0.058,
+      "gloss_index": 0.342,
+      "color_uniformity": 0.382
+    },
+    "('Kupro', 'Grade-3')": {
+      "crack_pct": 0.041,
+      "black_spot_pct": 0.02,
+      "insect_hole_pct": 0.011,
+      "sunburn_pct": 0.0,
+      "mold_pct": 0.368,
+      "total_defect_pct": 0.441,
+      "sugar_spot_pct": 1.665,
+      "wrinkle_index": 0.069,
+      "gloss_index": 0.147,
+      "color_uniformity": 0.373
+    }
+  },
+  "spearman_with_grade": {
+    "crack_pct": {
+      "Gajar": 0.309,
+      "Kupro": 0.083
+    },
+    "black_spot_pct": {
+      "Gajar": 0.477,
+      "Kupro": 0.063
+    },
+    "insect_hole_pct": {
+      "Gajar": 0.594,
+      "Kupro": 0.153
+    },
+    "sunburn_pct": {
+      "Gajar": NaN,
+      "Kupro": -0.04
+    },
+    "mold_pct": {
+      "Gajar": -0.053,
+      "Kupro": -0.211
+    },
+    "total_defect_pct": {
+      "Gajar": 0.525,
+      "Kupro": -0.181
+    },
+    "sugar_spot_pct": {
+      "Gajar": 0.085,
+      "Kupro": 0.28
+    },
+    "wrinkle_index": {
+      "Gajar": -0.253,
+      "Kupro": 0.346
+    },
+    "gloss_index": {
+      "Gajar": -0.312,
+      "Kupro": -0.225
+    },
+    "color_uniformity": {
+      "Gajar": -0.006,
+      "Kupro": -0.081
+    }
+  }
+}

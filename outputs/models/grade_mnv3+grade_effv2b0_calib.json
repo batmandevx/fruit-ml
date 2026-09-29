@@ -1,0 +1,9 @@
+{
+  "runs": [
+    "grade_mnv3",
+    "grade_effv2b0"
+  ],
+  "temperature": 0.5486,
+  "review_threshold": 0.9726,
+  "target_accuracy": 0.99
+}

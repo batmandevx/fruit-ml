@@ -1,0 +1,81 @@
+{
+  "Aseel": {
+    "test_accuracy": 0.986,
+    "n_test": 73,
+    "labels": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "confusion": [
+      [
+        25,
+        0,
+        0
+      ],
+      [
+        1,
+        24,
+        0
+      ],
+      [
+        0,
+        0,
+        23
+      ]
+    ]
+  },
+  "Fasli Toto": {
+    "test_accuracy": 0.898,
+    "n_test": 59,
+    "labels": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "confusion": [
+      [
+        11,
+        2,
+        0
+      ],
+      [
+        2,
+        19,
+        2
+      ],
+      [
+        0,
+        0,
+        23
+      ]
+    ]
+  },
+  "Gajar": {
+    "test_accuracy": 0.707,
+    "n_test": 198,
+    "labels": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "confusion": [
+      [
+        67,
+        12,
+        4
+      ],
+      [
+        32,
+        14,
+        5
+      ],
+      [
+        0,
+        5,
+        59
+      ]
+    ]
+  },
+  "overall_test_accuracy": 0.803
+}

@@ -1,0 +1,11 @@
+class,fruit_fraction_of_image,color.mean_hue_deg,color.mean_saturation,color.mean_brightness,color.color_spread_deltaE,color.color_uniformity,shape.n_fruit_regions,shape.area_px,shape.length_px,shape.width_px,shape.aspect_ratio,shape.circularity,shape.solidity,shape.extent,shape.eccentricity,texture.glcm_contrast,texture.glcm_dissimilarity,texture.glcm_homogeneity,texture.glcm_energy,texture.glcm_correlation,texture.lbp_entropy,texture.wrinkle_index,texture.gloss_index,color.color_name,shape.shape
+Al-ajwa,0.22,14.15,0.072,0.2565,13.79,0.3985,1.0,57234.5,333.1,221.85,1.5035,0.812,0.985,0.811,0.747,5.0749,1.3924,0.5508,0.1411,0.9042,3.1855,0.1035,0.0,black / very dark brown,oval
+Al-majdool,0.3225,15.0,0.509,0.5225,15.03,0.367,1.0,83217.5,425.35,248.25,1.746,0.7565,0.987,0.7805,0.82,5.2411,1.4097,0.5518,0.1279,0.8436,3.1685,0.112,0.0002,amber brown,oblong / elongated
+Al-meneifi,0.2615,16.6,0.5845,0.5385,16.39,0.3355,1.0,68034.0,383.05,229.95,1.6535,0.793,0.989,0.787,0.7965,2.088,0.8747,0.6622,0.152,0.9428,3.153,0.0379,0.0,amber brown,oblong / elongated
+Al-muraaya,0.362,34.5,0.648,0.539,23.42,0.21,1.0,94210.0,461.3,314.8,1.4,0.574,0.898,0.694,0.7,2.2197,0.7339,0.7207,0.1347,0.9692,3.057,0.0317,0.0013,golden brown,oval
+Al-sagai,0.32,21.5,0.638,0.572,16.84,0.325,1.0,80637.0,434.1,245.0,1.776,0.754,0.986,0.793,0.826,2.2743,0.918,0.6476,0.1444,0.9367,3.157,0.0397,0.0,amber brown,oblong / elongated
+Al-shaishe,0.2655,24.5,0.464,0.508,15.865,0.3475,1.0,69052.5,378.05,236.3,1.605,0.795,0.988,0.793,0.782,2.0804,0.8767,0.6577,0.1472,0.9438,3.167,0.0365,0.0,amber brown,oblong / elongated
+Al-skari,0.2745,25.2,0.594,0.5575,17.4,0.3135,1.0,70864.0,368.4,255.5,1.444,0.797,0.986,0.776,0.7215,1.9678,0.8651,0.6574,0.1387,0.9481,3.1875,0.0285,0.0,amber brown,oval
+Al-skri_magrosh,0.482,24.3,0.639,0.623,22.075,0.2295,1.0,111584.0,438.8,344.55,1.276,0.6035,0.924,0.722,0.621,5.4846,1.3459,0.58,0.1113,0.9097,3.0415,0.1058,0.0116,amber brown,oval
+Galaxy,0.245,15.3,0.559,0.496,16.59,0.331,1.0,63738.0,335.7,244.6,1.39,0.807,0.985,0.786,0.695,2.7912,1.0153,0.6256,0.1505,0.9318,3.181,0.0533,0.0,amber brown,oval
+NbotAli,0.3225,22.85,0.622,0.56,16.105,0.342,1.0,81148.5,414.45,252.1,1.6395,0.7595,0.984,0.7815,0.7925,1.4638,0.713,0.7032,0.1576,0.9546,3.15,0.014,0.0,amber brown,oblong / elongated

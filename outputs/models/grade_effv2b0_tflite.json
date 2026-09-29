@@ -1,0 +1,9 @@
+{
+  "run": "grade_effv2b0",
+  "tflite_mb": 11.79,
+  "keras_mb": 71.17,
+  "n_checked": 200,
+  "top1_agreement": 1.0,
+  "max_prob_diff": 0.003,
+  "cpu_latency_ms_median": 68.5
+}

@@ -1,0 +1,29 @@
+{
+  "run": "effv2b0_260",
+  "data": "variety",
+  "backbone": "efficientnetv2b0",
+  "img_size": 260,
+  "class_names": [
+    "Al-ajwa",
+    "Al-majdool",
+    "Al-meneifi",
+    "Al-muraaya",
+    "Al-sagai",
+    "Al-shaishe",
+    "Al-skari",
+    "Al-skri_magrosh",
+    "Galaxy",
+    "NbotAli"
+  ],
+  "args": {
+    "backbone": "efficientnetv2b0",
+    "img_size": 260,
+    "ft_layers": 0,
+    "ft_lr": 0.0001,
+    "label_smoothing": 0.1,
+    "head_epochs": 15,
+    "ft_epochs": 40
+  },
+  "note": "meta reconstructed from outputs/logs/local_sweep.sh and train_effv2b0_260.log; the run finished but its meta file was not kept",
+  "best_val_accuracy": 0.9673
+}

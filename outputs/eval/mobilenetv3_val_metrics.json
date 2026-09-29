@@ -1,0 +1,253 @@
+{
+  "name": "mobilenetv3",
+  "split": "val",
+  "n": 275,
+  "loss": 0.27777132391929626,
+  "accuracy": 0.9018181818181819,
+  "f1_macro": 0.9124744213177902,
+  "f1_weighted": 0.8996152631495581,
+  "top2_accuracy": 0.9636363636363636,
+  "accuracy_by_source": {
+    "alhamdan": 0.9035087719298246,
+    "zenodo": 0.8936170212765957
+  },
+  "per_class": {
+    "Al-ajwa": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 27.0
+    },
+    "Al-majdool": {
+      "precision": 0.875,
+      "recall": 1.0,
+      "f1-score": 0.9333333333333333,
+      "support": 21.0
+    },
+    "Al-meneifi": {
+      "precision": 0.9583333333333334,
+      "recall": 0.6571428571428571,
+      "f1-score": 0.7796610169491526,
+      "support": 35.0
+    },
+    "Al-muraaya": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 7.0
+    },
+    "Al-sagai": {
+      "precision": 0.875,
+      "recall": 0.875,
+      "f1-score": 0.875,
+      "support": 32.0
+    },
+    "Al-shaishe": {
+      "precision": 0.9583333333333334,
+      "recall": 0.92,
+      "f1-score": 0.9387755102040817,
+      "support": 25.0
+    },
+    "Al-skari": {
+      "precision": 0.7894736842105263,
+      "recall": 0.9183673469387755,
+      "f1-score": 0.8490566037735849,
+      "support": 49.0
+    },
+    "Al-skri_magrosh": {
+      "precision": 0.8181818181818182,
+      "recall": 1.0,
+      "f1-score": 0.9,
+      "support": 9.0
+    },
+    "Galaxy": {
+      "precision": 0.9230769230769231,
+      "recall": 0.8275862068965517,
+      "f1-score": 0.8727272727272727,
+      "support": 29.0
+    },
+    "NbotAli": {
+      "precision": 0.9534883720930233,
+      "recall": 1.0,
+      "f1-score": 0.9761904761904762,
+      "support": 41.0
+    },
+    "accuracy": 0.9018181818181819,
+    "macro avg": {
+      "precision": 0.9150887464228958,
+      "recall": 0.9198096410978185,
+      "f1-score": 0.9124744213177902,
+      "support": 275.0
+    },
+    "weighted avg": {
+      "precision": 0.908309457872716,
+      "recall": 0.9018181818181819,
+      "f1-score": 0.8996152631495581,
+      "support": 275.0
+    }
+  },
+  "misclassified": [
+    {
+      "file": "alhamdan__Meneifi Date (114).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-majdool",
+      "conf": 0.951
+    },
+    {
+      "file": "alhamdan__Meneifi Date (123).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-majdool",
+      "conf": 0.632
+    },
+    {
+      "file": "alhamdan__Meneifi Date (13).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-majdool",
+      "conf": 0.545
+    },
+    {
+      "file": "alhamdan__Meneifi Date (137).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-skari",
+      "conf": 0.714
+    },
+    {
+      "file": "alhamdan__Meneifi Date (144).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-skari",
+      "conf": 0.879
+    },
+    {
+      "file": "alhamdan__Meneifi Date (150).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-skari",
+      "conf": 0.945
+    },
+    {
+      "file": "alhamdan__Meneifi Date (192).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-skari",
+      "conf": 0.354
+    },
+    {
+      "file": "alhamdan__Meneifi Date (197).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-skari",
+      "conf": 0.766
+    },
+    {
+      "file": "alhamdan__Meneifi Date (203).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-sagai",
+      "conf": 0.733
+    },
+    {
+      "file": "alhamdan__Meneifi Date (230).jpg",
+      "true": "Al-meneifi",
+      "pred": "NbotAli",
+      "conf": 0.778
+    },
+    {
+      "file": "alhamdan__Meneifi Date (31).jpg",
+      "true": "Al-meneifi",
+      "pred": "Al-skari",
+      "conf": 0.547
+    },
+    {
+      "file": "alhamdan__Meneifi Date (90).jpg",
+      "true": "Al-meneifi",
+      "pred": "Galaxy",
+      "conf": 0.57
+    },
+    {
+      "file": "alhamdan__Sugaey Date (124).jpg",
+      "true": "Al-sagai",
+      "pred": "Galaxy",
+      "conf": 0.807
+    },
+    {
+      "file": "alhamdan__Sugaey Date (15).jpg",
+      "true": "Al-sagai",
+      "pred": "Al-shaishe",
+      "conf": 0.649
+    },
+    {
+      "file": "alhamdan__Sugaey Date (57).jpg",
+      "true": "Al-sagai",
+      "pred": "Al-meneifi",
+      "conf": 0.449
+    },
+    {
+      "file": "zenodo__sequee-37.jpg",
+      "true": "Al-sagai",
+      "pred": "Al-skari",
+      "conf": 0.547
+    },
+    {
+      "file": "alhamdan__Shaishe Date (149).jpg",
+      "true": "Al-shaishe",
+      "pred": "NbotAli",
+      "conf": 0.859
+    },
+    {
+      "file": "alhamdan__Shaishe Date (73).jpg",
+      "true": "Al-shaishe",
+      "pred": "Al-skari",
+      "conf": 0.874
+    },
+    {
+      "file": "zenodo__Skari-11.jpg",
+      "true": "Al-skari",
+      "pred": "Al-sagai",
+      "conf": 0.538
+    },
+    {
+      "file": "zenodo__Skari-16.jpg",
+      "true": "Al-skari",
+      "pred": "Al-skri_magrosh",
+      "conf": 0.657
+    },
+    {
+      "file": "zenodo__Skari-51.jpg",
+      "true": "Al-skari",
+      "pred": "Al-sagai",
+      "conf": 0.702
+    },
+    {
+      "file": "zenodo__Skari-54.jpg",
+      "true": "Al-skari",
+      "pred": "Al-skri_magrosh",
+      "conf": 0.628
+    },
+    {
+      "file": "alhamdan__Galaxy Date (108).jpg",
+      "true": "Galaxy",
+      "pred": "Al-skari",
+      "conf": 0.996
+    },
+    {
+      "file": "alhamdan__Galaxy Date (124).jpg",
+      "true": "Galaxy",
+      "pred": "Al-skari",
+      "conf": 0.886
+    },
+    {
+      "file": "alhamdan__Galaxy Date (130).jpg",
+      "true": "Galaxy",
+      "pred": "Al-skari",
+      "conf": 0.647
+    },
+    {
+      "file": "alhamdan__Galaxy Date (160).jpg",
+      "true": "Galaxy",
+      "pred": "Al-sagai",
+      "conf": 0.601
+    },
+    {
+      "file": "alhamdan__Galaxy Date (43).jpg",
+      "true": "Galaxy",
+      "pred": "Al-skari",
+      "conf": 0.643
+    }
+  ]
+}

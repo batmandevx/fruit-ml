@@ -1,0 +1,177 @@
+{
+  "name": "maturity_mnv3_tta",
+  "split": "val",
+  "n": 295,
+  "loss": 0.27862316370010376,
+  "accuracy": 0.9322033898305084,
+  "f1_macro": 0.9308944432224873,
+  "f1_weighted": 0.9322811801054652,
+  "top2_accuracy": 0.9932203389830508,
+  "accuracy_by_source": {
+    "alhamdan": 1.0,
+    "morocco-boufagous": 0.9166666666666666,
+    "morocco-bouisthami": 0.9375,
+    "morocco-boumajhoul": 0.8939393939393939
+  },
+  "per_class": {
+    "Immature": {
+      "precision": 0.9,
+      "recall": 0.9402985074626866,
+      "f1-score": 0.9197080291970803,
+      "support": 67.0
+    },
+    "Khalal": {
+      "precision": 0.9,
+      "recall": 0.8873239436619719,
+      "f1-score": 0.8936170212765957,
+      "support": 71.0
+    },
+    "Rutab": {
+      "precision": 0.974025974025974,
+      "recall": 0.9375,
+      "f1-score": 0.9554140127388535,
+      "support": 80.0
+    },
+    "Tamar": {
+      "precision": 0.9487179487179487,
+      "recall": 0.961038961038961,
+      "f1-score": 0.9548387096774194,
+      "support": 77.0
+    },
+    "accuracy": 0.9322033898305084,
+    "macro avg": {
+      "precision": 0.9306859806859806,
+      "recall": 0.9315403530409049,
+      "f1-score": 0.9308944432224873,
+      "support": 295.0
+    },
+    "weighted avg": {
+      "precision": 0.9327910507571525,
+      "recall": 0.9322033898305084,
+      "f1-score": 0.9322811801054652,
+      "support": 295.0
+    }
+  },
+  "misclassified": [
+    {
+      "file": "morocco-boufagous__boufagous__Boufgous_Stage1_Im85__5.jpg",
+      "true": "Immature",
+      "pred": "Khalal",
+      "conf": 0.909
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__BOUSTH_Stage1_Im30__0.jpg",
+      "true": "Immature",
+      "pred": "Khalal",
+      "conf": 0.536
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__20220725_181746__0.jpg",
+      "true": "Immature",
+      "pred": "Khalal",
+      "conf": 0.679
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__Elmjhoul_Stage1_Im43__0.jpg",
+      "true": "Immature",
+      "pred": "Khalal",
+      "conf": 0.602
+    },
+    {
+      "file": "morocco-boufagous__boufagous__DSC_2649__5.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.773
+    },
+    {
+      "file": "morocco-boufagous__boufagous__DSC_2802__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.864
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__DSC_2520__6.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.414
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__DSC_2527__4.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.951
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__DSC_2556__5.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.497
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__DSC_2590__0.jpg",
+      "true": "Khalal",
+      "pred": "Tamar",
+      "conf": 0.492
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__DSC_2894__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.514
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__20220901_131746__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.868
+    },
+    {
+      "file": "morocco-boufagous__boufagous__20220922_134253__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.449
+    },
+    {
+      "file": "morocco-bouisthami__bouisthami__DSC_2970__0.jpg",
+      "true": "Rutab",
+      "pred": "Khalal",
+      "conf": 0.779
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__20220918_185926__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.55
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__20220920_124116__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.461
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__20220920_125337__1.jpg",
+      "true": "Rutab",
+      "pred": "Khalal",
+      "conf": 0.501
+    },
+    {
+      "file": "morocco-boufagous__boufagous__20221008_154039__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.893
+    },
+    {
+      "file": "morocco-boufagous__boufagous__305416869_1028247944515687_51140899108743384_n__1.jpg",
+      "true": "Tamar",
+      "pred": "Khalal",
+      "conf": 0.725
+    },
+    {
+      "file": "morocco-boumajhoul__boumajhoul__20221009_174548__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.556
+    }
+  ]
+}

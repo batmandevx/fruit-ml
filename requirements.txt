@@ -1,0 +1,12 @@
+tensorflow>=2.16,<2.21
+numpy
+pillow
+pillow-heif
+scikit-learn
+scikit-image
+opencv-python-headless
+matplotlib
+pandas
+remotezip
+joblib
+pytest
