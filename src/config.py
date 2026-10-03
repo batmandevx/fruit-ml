@@ -46,12 +46,18 @@ ALHAMDAN_MAP = {
     "Galaxy": "Galaxy",
 }
 
-# The 10 varieties trained. First five are on the doc's preferred list; the
-# rest are the best-supplied remaining classes.
+# The 17 varieties trained. First five are on the doc's preferred list; then the
+# best-supplied remaining web/studio classes, then the four grading-set varieties
+# (named as in data/kaggle/grading so grade.py picks their pixel size model).
+GRADING_VARIETIES = ["Aseel", "Fasli Toto", "Gajar", "Kupro"]
 CLASSES = [
     "Al-skari", "Al-ajwa", "Al-majdool", "Al-sagai", "Al-muraaya",
     "NbotAli", "Al-meneifi", "Al-shaishe", "Galaxy", "Al-skri_magrosh",
-]
+    "Al-masyihia", "Al-shagra", "SagaiIRAQ",
+] + GRADING_VARIETIES
+# Grading-set photos per variety used for the variety model (Gajar alone has 1,310;
+# all come from one camera rig, so more would only unbalance the classes).
+GRADING_PER_VARIETY = 200
 
 # Longest side of images stored in data/processed (originals go up to ~9 MB).
 STORE_MAX_SIDE = 640
@@ -85,9 +91,11 @@ WEIGHT_K = 6.8e-4
 # Models used by grade.py (chosen on the validation split; see reports/model_report.html).
 # A list of several runs = an ensemble (averaged probabilities).
 PRODUCTION_RUNS = {
-    "variety": ["effv2b0_260"],
+    # DINOv3-B probe (probe.py, PyTorch) + EfficientNetV2-B0; one DINOv3 pass serves variety and maturity.
+    # The variety probe is trained with background-removed copies (--bg-aug): without them it relied on photo-session cues.
+    "variety": ["probe_dinov3_b_bgaug", "effv2b0_260_v2"],
     "grade": ["grade_mnv3", "grade_effv2b0"],
-    "maturity": ["maturity_effv2b0"],
+    "maturity": ["maturity_probe_dinov3_b", "maturity_effv2b0"],
 }
 
 

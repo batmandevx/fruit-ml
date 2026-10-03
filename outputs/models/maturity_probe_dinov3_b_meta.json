@@ -1,0 +1,14 @@
+{
+  "data": "maturity",
+  "C": 0.03,
+  "class_names": [
+    "Immature",
+    "Khalal",
+    "Rutab",
+    "Tamar"
+  ],
+  "model": "dinov3_b",
+  "timm": "vit_base_patch16_dinov3.lvd1689m",
+  "img_size": 336,
+  "val_loss": 0.15969039499759674
+}

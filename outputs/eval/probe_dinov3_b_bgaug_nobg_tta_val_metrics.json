@@ -1,0 +1,164 @@
+{
+  "name": "probe_dinov3_b_bgaug_nobg_tta",
+  "split": "val",
+  "n": 414,
+  "loss": 0.04694553092122078,
+  "accuracy": 0.9879227053140096,
+  "f1_macro": 0.9618527781956772,
+  "f1_weighted": 0.9879485741996862,
+  "top2_accuracy": 0.9951690821256038,
+  "accuracy_by_source": {
+    "alhamdan": 0.9956140350877193,
+    "grading": 1.0,
+    "zenodo": 0.9393939393939394
+  },
+  "per_class": {
+    "Al-ajwa": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 27.0
+    },
+    "Al-majdool": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 21.0
+    },
+    "Al-masyihia": {
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1-score": 0.8,
+      "support": 5.0
+    },
+    "Al-meneifi": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 35.0
+    },
+    "Al-muraaya": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 7.0
+    },
+    "Al-sagai": {
+      "precision": 0.96875,
+      "recall": 0.96875,
+      "f1-score": 0.96875,
+      "support": 32.0
+    },
+    "Al-shagra": {
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 3.0
+    },
+    "Al-shaishe": {
+      "precision": 0.9615384615384616,
+      "recall": 1.0,
+      "f1-score": 0.9803921568627451,
+      "support": 25.0
+    },
+    "Al-skari": {
+      "precision": 1.0,
+      "recall": 0.9591836734693877,
+      "f1-score": 0.9791666666666666,
+      "support": 49.0
+    },
+    "Al-skri_magrosh": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 9.0
+    },
+    "Aseel": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 31.0
+    },
+    "Fasli Toto": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 31.0
+    },
+    "Gajar": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 35.0
+    },
+    "Galaxy": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 29.0
+    },
+    "Kupro": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 23.0
+    },
+    "NbotAli": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 41.0
+    },
+    "SagaiIRAQ": {
+      "precision": 0.9166666666666666,
+      "recall": 1.0,
+      "f1-score": 0.9565217391304348,
+      "support": 11.0
+    },
+    "accuracy": 0.9879227053140096,
+    "macro avg": {
+      "precision": 0.9596248114630468,
+      "recall": 0.9643882553021207,
+      "f1-score": 0.9618527781956772,
+      "support": 414.0
+    },
+    "weighted avg": {
+      "precision": 0.9882168958255915,
+      "recall": 0.9879227053140096,
+      "f1-score": 0.9879485741996862,
+      "support": 414.0
+    }
+  },
+  "misclassified": [
+    {
+      "file": "zenodo__masyihia-22.jpg",
+      "true": "Al-masyihia",
+      "pred": "Al-shagra",
+      "conf": 0.577
+    },
+    {
+      "file": "alhamdan__Sugaey Date (96).jpg",
+      "true": "Al-sagai",
+      "pred": "Al-shaishe",
+      "conf": 0.687
+    },
+    {
+      "file": "zenodo__Shagra-22.jpg",
+      "true": "Al-shagra",
+      "pred": "Al-masyihia",
+      "conf": 0.376
+    },
+    {
+      "file": "zenodo__Skari-3.jpg",
+      "true": "Al-skari",
+      "pred": "SagaiIRAQ",
+      "conf": 0.534
+    },
+    {
+      "file": "zenodo__Skari-54.jpg",
+      "true": "Al-skari",
+      "pred": "Al-sagai",
+      "conf": 0.802
+    }
+  ]
+}

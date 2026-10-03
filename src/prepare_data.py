@@ -4,9 +4,13 @@ train/val/test split to data/processed/<split>/<class>/.
 * Zenodo 4639543: filename prefix -> class; HEIC converted; EXIF rotation fixed.
 * Kaggle Alhamdan: one fruit on a plain grey background, ~15% of a 5184x3456
   frame, so each image is auto-cropped to a square around the fruit.
+* Kaggle grading set: the padded crops written by prepare_quality.py (run it
+  first), GRADING_PER_VARIETY per variety, keeping their grade split so no
+  grade test fruit is trained on here.
 
 Stratification is on class+source, so every split holds both photo styles of a
-variety that has both.
+variety that has both. Images already listed in data/splits.csv keep their
+split, so adding classes never moves an old test image into train.
 """
 import concurrent.futures as cf
 import re
@@ -20,8 +24,8 @@ from PIL import Image, ImageOps
 from pillow_heif import register_heif_opener
 from sklearn.model_selection import train_test_split
 
-from config import (ALHAMDAN_DIR, ALHAMDAN_MAP, CLASSES, PROCESSED_DIR, RAW_DIR, SEED, SPLIT, SPLITS_CSV,
-                    STORE_MAX_SIDE, ZENODO_MAP)
+from config import (ALHAMDAN_DIR, ALHAMDAN_MAP, CLASSES, GRADING_PER_VARIETY, PROCESSED_DIR, QUALITY_DIR, RAW_DIR,
+                    SEED, SPLIT, SPLITS_CSV, STORE_MAX_SIDE, ZENODO_MAP)
 
 register_heif_opener()
 EXTS = {".jpg", ".jpeg", ".png", ".heic"}
@@ -39,6 +43,31 @@ def collect():
                  for p in sorted((ALHAMDAN_DIR / folder).iterdir()) if p.suffix.lower() in EXTS]
     df = pd.DataFrame(rows)
     return df[df.label.isin(CLASSES)].reset_index(drop=True)
+
+
+def collect_grading():
+    """Grading-set crops from prepare_quality.py, sampled per variety with their grade split kept."""
+    index = QUALITY_DIR / "grading_index.csv"
+    if not index.exists():
+        raise SystemExit(f"{index} missing: run src/prepare_quality.py first")
+    g = pd.read_csv(index)
+    g = g[g.variety.isin(CLASSES)]
+    frac = (GRADING_PER_VARIETY / g.variety.map(g.variety.value_counts())).clip(upper=1)
+    g = g[np.random.default_rng(SEED).random(len(g)) < frac]
+    # the index stores absolute paths of the checkout that built it; rebuild them under QUALITY_DIR
+    return pd.DataFrame({
+        "path": [str(QUALITY_DIR / "grade" / r.split / r.grade / Path(r.out).name) for r in g.itertuples()],
+        # file numbers repeat across grade folders, so the grade goes into the output name
+        "stem": [f"{Path(r.out).stem}__{r.grade}" for r in g.itertuples()],
+        "label": g.variety.values, "source": "grading", "split": g.split.values,
+    })
+
+
+def split_new(df, strata):
+    train, rest = train_test_split(df, train_size=SPLIT["train"], stratify=strata, random_state=SEED)
+    val_frac = SPLIT["val"] / (SPLIT["val"] + SPLIT["test"])
+    val, test = train_test_split(rest, train_size=val_frac, stratify=strata[rest.index], random_state=SEED)
+    return pd.concat([train.assign(split="train"), val.assign(split="val"), test.assign(split="test")])
 
 
 def crop_to_fruit(img, margin=0.3):
@@ -67,6 +96,10 @@ def crop_to_fruit(img, margin=0.3):
 
 def process(row):
     src, out, source = row
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if source == "grading":  # already a padded square <= STORE_MAX_SIDE
+        shutil.copyfile(src, out)
+        return
     img = Image.open(src)
     if source == "alhamdan":
         img.draft("RGB", (img.width // 2, img.height // 2))
@@ -74,7 +107,6 @@ def process(row):
     if source == "alhamdan":
         img = crop_to_fruit(img)
     img.thumbnail((STORE_MAX_SIDE, STORE_MAX_SIDE), Image.LANCZOS)
-    out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out, quality=95)
 
 
@@ -83,16 +115,24 @@ def main():
     too_few = df.label.value_counts().loc[lambda s: s < 20]
     if len(too_few):
         raise SystemExit(f"Too few images for {dict(too_few)}: is the Zenodo download in {RAW_DIR} complete?")
-    strata = df.label + "|" + df.source
-    # A class+source group too small to spread over three splits is stratified by class only.
-    counts = strata.map(strata.value_counts())
-    strata = strata.where(counts >= 10, df.label)
-    train, rest = train_test_split(df, train_size=SPLIT["train"], stratify=strata, random_state=SEED)
-    val_frac = SPLIT["val"] / (SPLIT["val"] + SPLIT["test"])
-    val, test = train_test_split(rest, train_size=val_frac, stratify=strata[rest.index], random_state=SEED)
-    df = pd.concat([train.assign(split="train"), val.assign(split="val"), test.assign(split="test")])
+    key = df.source + "__" + df.path.map(lambda p: Path(p).stem)
+    old = {}
+    if SPLITS_CSV.exists():
+        prev = pd.read_csv(SPLITS_CSV)
+        prev = prev[prev.source != "grading"]
+        old = dict(zip(prev.source + "__" + prev.path.map(lambda p: Path(p).stem), prev.split))
+    df["split"] = key.map(old)
+    kept, new = df[df.split.notna()], df[df.split.isna()].drop(columns="split")
+    if len(new):
+        strata = new.label + "|" + new.source
+        # A class+source group too small to spread over three splits is stratified by class only.
+        counts = strata.map(strata.value_counts())
+        new = split_new(new, strata.where(counts >= 10, new.label))
+    print(f"{len(kept)} images keep their split from {SPLITS_CSV.name}, {len(new)} newly split")
+    df = pd.concat([kept, new, collect_grading()], ignore_index=True)
+    df["stem"] = df.stem.fillna(df.path.map(lambda p: Path(p).stem))
     df["out"] = [
-        str(PROCESSED_DIR / r.split / r.label / f"{r.source}__{Path(r.path).stem}.jpg")
+        str(PROCESSED_DIR / r.split / r.label / f"{r.source}__{r.stem}.jpg")
         for r in df.itertuples()
     ]
 

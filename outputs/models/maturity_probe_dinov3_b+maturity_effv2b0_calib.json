@@ -1,0 +1,9 @@
+{
+  "runs": [
+    "maturity_probe_dinov3_b",
+    "maturity_effv2b0"
+  ],
+  "temperature": 0.5133,
+  "review_threshold": 0.9368,
+  "target_accuracy": 0.99
+}

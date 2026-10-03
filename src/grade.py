@@ -50,8 +50,12 @@ def load_model(runs):
         if not meta_path.exists():
             print(f"note: model '{run}' not trained yet, skipped", file=sys.stderr)
             return None
-        members.append((tf.keras.models.load_model(config.MODEL_DIR / f"{run}_best.keras"),
-                        json.loads(meta_path.read_text())))
+        meta = json.loads(meta_path.read_text())
+        if "timm" in meta:  # PyTorch foundation-model probe (probe.py); torch is only imported when used
+            from probe import load_probe
+            members.append((load_probe(run), meta))
+        else:
+            members.append((tf.keras.models.load_model(config.MODEL_DIR / f"{run}_best.keras"), meta))
     names = members[0][1]["class_names"]
     assert all(m["class_names"] == names for _, m in members), "ensemble members disagree on classes"
     calib_path = config.MODEL_DIR / f"{config.run_name(runs)}_calib.json"
@@ -78,9 +82,14 @@ def fruit_crop(rgb, mask, margin=0.15):
 
 def classify(model_meta, crop):
     """Top class with temperature-calibrated probabilities (calibrate.py). A prediction
-    below the model's review threshold is flagged for manual review."""
+    below the model's review threshold is flagged for manual review. Also returns the
+    first Keras member's input (for Grad-CAM) and the class index."""
     probs, xs = [], []
     for model, meta in model_meta["members"]:
+        if "timm" in meta:
+            from probe import probe_probs
+            probs.append(probe_probs(model, crop).astype(np.float64))
+            continue
         S = meta["img_size"]
         x = tf.constant(np.asarray(Image.fromarray(crop).resize((S, S), Image.BILINEAR), np.float32)[None])
         probs.append(model(x, training=False)[0].numpy().astype(np.float64))
@@ -96,7 +105,7 @@ def classify(model_meta, crop):
     names = model_meta["class_names"]
     return {"label": names[i], "confidence": round(float(probs[i]), 3),
             "needs_review": bool(thr is not None and probs[i] < thr),
-            "probs": {c: round(float(p), 3) for c, p in zip(names, probs)}}, xs[0], i
+            "probs": {c: round(float(p), 3) for c, p in zip(names, probs)}}, (xs or [None])[0], i
 
 
 def load_models(runs=None):
@@ -157,7 +166,7 @@ def grade_image(image, models, variety_override=None, mm_per_px_arg=None, bag_we
             cam = upsample(gradcam(models["grade"]["members"][0][0], x, gi), x.shape[1])  # first member
             panels.append((x[0].numpy().astype(np.uint8), cam, f"#{n} {rec['grade']['label']}"))
         # The size model knows the grading-set varieties by their folder names.
-        size_variety = variety if variety in {"Aseel", "Fasli Toto", "Gajar", "Kupro"} else None
+        size_variety = variety if variety in config.GRADING_VARIETIES else None
         q, dmasks = analyse_fruit(rgb, mask, mm_per_px, size_variety, px_scale, (close_rgb, close_mask))
         rec.update(q)
         rec["_mask"], rec["_defects"], rec["_close"] = mask, dmasks, close_rgb

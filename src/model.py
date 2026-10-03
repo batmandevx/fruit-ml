@@ -11,7 +11,9 @@ BACKBONES = {
     "mobilenetv3": (lambda **kw: A.MobileNetV3Large(include_preprocessing=True, **kw), 224),
     "efficientnet": (A.EfficientNetB0, 224),  # closest Keras counterpart of EfficientNet-Lite
     "efficientnetv2b0": (lambda **kw: A.EfficientNetV2B0(include_preprocessing=True, **kw), 260),
+    "efficientnetv2b3": (lambda **kw: A.EfficientNetV2B3(include_preprocessing=True, **kw), 300),
     "efficientnetv2s": (lambda **kw: A.EfficientNetV2S(include_preprocessing=True, **kw), 384),
+    # ConvNeXt's grouped convs always go through XLA in Keras, which the Metal plugin lacks: GPU/Colab only.
     "convnext_tiny": (lambda **kw: A.ConvNeXtTiny(include_preprocessing=True, **kw), 288),
     "convnext_small": (lambda **kw: A.ConvNeXtSmall(include_preprocessing=True, **kw), 288),
 }

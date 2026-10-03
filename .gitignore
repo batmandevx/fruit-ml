@@ -21,10 +21,16 @@ outputs/models/*
 !outputs/models/*_calib.json
 !outputs/models/*_tflite.json
 !outputs/models/effv2b0_260_best.keras
+!outputs/models/effv2b0_260_v2_best.keras
 !outputs/models/grade_mnv3_best.keras
 !outputs/models/grade_effv2b0_best.keras
 !outputs/models/maturity_effv2b0_best.keras
 !outputs/models/effv2b0_260.tflite
+!outputs/models/effv2b0_260_v2.tflite
 !outputs/models/grade_mnv3.tflite
 !outputs/models/grade_effv2b0.tflite
 !outputs/models/maturity_effv2b0.tflite
+# PyTorch probes are small (~0.1 MB; the DINOv3 backbone is downloaded from Hugging Face)
+!outputs/models/*_probe.joblib
+# cached foundation-model embeddings (~0.6 GB, rebuilt by probe.py)
+outputs/features/

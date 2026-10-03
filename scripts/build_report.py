@@ -25,20 +25,45 @@ OUT = ROOT / "reports"
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 TASKS = {
-    "variety": {"title": "Phase 1 · Variety classification", "candidates": ["mobilenetv3", "effv2b0_260"],
-                "test_note": "Random stratified 70/15/15 split of 10 varieties (Zenodo web photos + Alhamdan studio photos)."},
-    "grade": {"title": "Phase 2 · Quality grade (1–3)", "candidates": ["grade_mnv3", "grade_effv2b0", "grade_mnv3+grade_effv2b0"],
+    "variety": {"title": "Phase 1 · Variety classification",
+                "candidates": ["mnv3_v2", "effv2b0_260_v2", "effv2b0_260_v2+mnv3_v2", "probe_dinov3_b", "probe_dinov3_l",
+                               "probe_dinov2_l", "probe_dinov3_b+effv2b0_260_v2", "probe_dinov3_l+probe_dinov2_l+effv2b0_260_v2",
+                               "probe_dinov3_b_bgaug", "probe_dinov3_b_bgaug+effv2b0_260_v2"],
+                "test_note": "Random stratified 70/15/15 split of 17 varieties (Zenodo web photos, Alhamdan studio photos, and "
+                             f"{config.GRADING_PER_VARIETY} grading-set photos per grading variety, kept in their grade split). "
+                             "Images of the original 10 varieties keep their earlier split.",
+                "extra": "<p class='note'><b>Background shortcut found and fixed.</b> The first DINOv3 probe scored 99.0 % on "
+                         "validation but only 82.1 % once the background was removed (the CNN: 96.8 → 95.6 % on test): the frozen "
+                         "backbone also encodes each variety's photo session (lighting, framing), and the probe used it. Its Grad-CAM "
+                         "showed the same, with heat on the background around the fruit. Training the probe on every image twice, "
+                         "as photographed and with the background removed (<code>--bg-aug</code>), keeps 99.0 % on original "
+                         "photos and reaches 98.8 % without background. It was chosen over the slightly higher but shortcut-prone "
+                         "ensemble (99.8 % vs 99.5 % validation) on this check, before the test set was scored.</p>"},
+    "grade": {"title": "Phase 2 · Quality grade (1–3)",
+              "candidates": ["grade_mnv3", "grade_effv2b0", "grade_mnv3+grade_effv2b0", "grade_probe_dinov3_b",
+                             "grade_probe_dinov3_l", "grade_ft_dinov3_b", "grade_probe_dinov3_b+grade_mnv3+grade_effv2b0",
+                             "grade_ft_dinov3_b+grade_mnv3+grade_effv2b0"],
               "test_note": "Stratified split of the Kaggle grading set (4 varieties). Aseel and Fasli Toto only have Grade-1, "
-                           "so the informative scores are Gajar and Kupro."},
-    "maturity": {"title": "Phase 2 · Maturity stage", "candidates": ["maturity_mnv3", "maturity_effv2b0", "maturity_mnv3+maturity_effv2b0"],
+                           "so the informative scores are Gajar and Kupro.",
+              "extra": "<p class='note'>Modern backbones did not beat the CNN ensemble here: a frozen DINOv3 probe (80–83 %) "
+                       "misses the small surface defects that separate the grades, and fully fine-tuning DINOv3-B at 336 px "
+                       "(layer-wise LR decay, fp16 on the Apple GPU) reached 87.4 % on validation vs 89.8 %; ensembling it "
+                       "with the CNNs did not help either. Three different model families plateauing at 87–90 % points to the "
+                       "subjective Grade-1/Grade-2 boundary in the labels as the limit.</p>"},
+    "maturity": {"title": "Phase 2 · Maturity stage",
+                 "candidates": ["maturity_mnv3", "maturity_effv2b0", "maturity_mnv3+maturity_effv2b0", "maturity_probe_dinov3_b",
+                                "maturity_probe_dinov3_l", "maturity_probe_dinov2_l", "maturity_probe_dinov3_b+maturity_effv2b0",
+                                "maturity_probe_dinov3_l+maturity_probe_dinov2_l+maturity_effv2b0"],
                  "test_note": "Test = the whole Moroccan variety Kholt, never seen in training (each stage was shot in one "
                               "session, so a random split would leak session lighting), plus held-out Alhamdan single fruits.",
-                 "extra": "<p class='note'>Validation (seen varieties, ~95 %) does not predict accuracy on a new variety (~65–70 %): "
-                          "the validation winner scores slightly <i>lower</i> on the unseen test variety than the MobileNetV3 "
-                          "candidate. It was kept, because switching on the test result would make the reported number "
-                          "optimistic. On studio photos of single fruits (Alhamdan, Rutab vs Tamar) it is 100 % (45/45).</p>"},
+                 "extra": "<p class='note'>Validation (seen varieties, ~95–97 %) does not predict accuracy on a new variety "
+                          "(~65–70 %). A leave-one-variety-out check inside train+val gives the DINOv3-B probe 55–76 % on each "
+                          "held-out Moroccan variety, the same level as the CNN on the test variety: a stronger backbone does "
+                          "not solve new-variety ripeness, per-fruit stage labels would. On studio photos of single fruits "
+                          "(Alhamdan, Rutab vs Tamar) it is 100 %.</p>"},
 }
-BACKBONE_NAMES = {"mobilenetv3": "MobileNetV3-Large 224", "efficientnetv2b0": "EfficientNetV2-B0 260"}
+BACKBONE_NAMES = {"mobilenetv3": "MobileNetV3-Large 224", "efficientnetv2b0": "EfficientNetV2-B0 260",
+                  "dinov3_b": "DINOv3 ViT-B/16 336", "dinov3_l": "DINOv3 ViT-L/16 336", "dinov2_l": "DINOv2 ViT-L/14 336"}
 
 
 def load(path):
@@ -80,7 +105,14 @@ def run_meta(run):
 
 def model_label(name):
     parts = name.split("+")
-    labels = [BACKBONE_NAMES.get(run_meta(r).get("backbone"), r) for r in parts]
+    labels = []
+    for r in parts:
+        m = run_meta(r)
+        if "timm" in m:  # PyTorch: frozen probe (probe.py) or full fine-tune (finetune.py)
+            labels.append(BACKBONE_NAMES.get(m["model"], m["model"]) + (" fine-tuned" if "history" in m else " probe")
+                          + (" (background-augmented)" if m.get("bg_aug") else ""))
+        else:
+            labels.append(BACKBONE_NAMES.get(m.get("backbone"), r))
     return labels[0] if len(labels) == 1 else "Ensemble: " + " + ".join(labels)
 
 
@@ -92,7 +124,8 @@ def model_section(task, spec):
     if test is None:
         return f"<section><h2>{spec['title']}</h2><p class='muted'>Not evaluated yet.</p></section>", None
     cal = load(EVAL / f"{run}_calibration.json")
-    sanity = load(EXPL / f"{members[0]}_sanity_checks.json")
+    sanities = [(m, load(EXPL / f"{m}_sanity_checks.json")) for m in members]
+    sanities = [(m, s) for m, s in sanities if s]
     tfls = [t for t in (load(MODELS / f"{m}_tflite.json") for m in members) if t]
 
     # model selection on the validation split
@@ -136,23 +169,25 @@ def model_section(task, spec):
         <div class="two"><div>{curve}</div></div>"""
 
     sanity_html = ""
-    if sanity and len(members) > 1:
-        sanity_html = f"<p class='muted'>Grad-CAM checks below are for the ensemble member {model_label(members[0])}.</p>"
-    if sanity:
-        s = sanity["summary"]
-        ok = lambda b: '<span class="pass">pass</span>' if b else '<span class="fail">fail</span>'
-        v = s["verdict"]
+    ok = lambda b: '<span class="pass">pass</span>' if b else '<span class="fail">fail</span>'
+    for m, sanity in sanities:
+        s, v = sanity["summary"], sanity["summary"]["verdict"]
+        member = f" · ensemble member {model_label(m)}" if len(members) > 1 else ""
         sanity_html += f"""
-        <h3>Explainability: Grad-CAM sanity checks (test split)</h3>
+        <h3>Explainability: Grad-CAM sanity checks (test split){member}</h3>
         {table(["Check", "Result", "Verdict"], [
             ["Heatmap vs fully randomised model (Spearman, low = map depends on learning)", num(s['spearman_vs_random_all']), ok(v['depends_on_learned_weights'])],
             ["Confidence drop when top-20% heatmap pixels are blurred vs random 20%", f"{num(s['deletion_drop_cam'])} vs {num(s['deletion_drop_random'])}", ok(v['faithful_deletion'])],
             ["Share of heatmap energy on fruit pixels vs fruit share of image", f"{pct(s['cam_energy_on_fruit'])} vs {pct(s['fruit_area_fraction'])}", ok(v['focuses_on_fruit'])],
-        ])}
-        {img(EXPL / f"{members[0]}_gradcam_gallery.png", "Grad-CAM gallery", "fig wide")}
-        <p class="caption">Columns: input · Grad-CAM · Grad-CAM++ · Guided Grad-CAM (Grad-CAM × SmoothGrad) · Grad-CAM of a randomised model.</p>"""
+        ] + ([["Test accuracy with the background removed vs as photographed (single view)",
+               f"{pct(s['accuracy_background_removed'])} vs {pct(s['accuracy_original'])}", ok(v['robust_to_background_removal'])]]
+             if "accuracy_background_removed" in s else []))}
+        {img(EXPL / f"{m}_gradcam_gallery.png", "Grad-CAM gallery", "fig wide")}
+        <p class="caption">Columns: input · Grad-CAM · Grad-CAM++ · Guided Grad-CAM (Grad-CAM × SmoothGrad) · Grad-CAM of a randomised
+        model.{" For the ViT, Grad-CAM runs on the final patch tokens (explain_vit.py)." if "timm" in run_meta(m) else ""}</p>"""
 
-    bag = EXPL / f"{members[0]}_bagged_examples.png"
+    bag = next((EXPL / f"{m}_bagged_examples.png" for m in members if (EXPL / f"{m}_bagged_examples.png").exists()),
+               EXPL / "none.png")
     if task == "maturity" and bag.exists():
         sanity_html += f"""
         <h3>Does the model look at the protective bags?</h3>
@@ -183,9 +218,11 @@ def model_section(task, spec):
       </div>
       <h3>Model selection</h3>
       {selection}
-      <p>Selected on validation: <b>{model_label(run)}</b>. ImageNet weights, frozen-backbone head training then whole-backbone
-      fine-tuning (AdamW, cosine schedule, label smoothing 0.1). Test scores use 4-flip test-time augmentation. The test
-      column is shown for transparency only and was not used to choose.</p>
+      <p>Selected on validation: <b>{model_label(run)}</b> (highest validation accuracy among candidates that pass the explainability sanity checks; ties go to the smaller model).
+      CNNs: ImageNet weights, frozen-backbone head training then whole-backbone fine-tuning (AdamW, cosine schedule, label
+      smoothing 0.1). Probes (PyTorch, Apple GPU): frozen self-supervised DINOv3/DINOv2 backbone, [CLS, mean patch]
+      embedding, logistic regression with C chosen on validation loss. Ensembles average probabilities. Test scores use
+      4-flip test-time augmentation. The test column is shown for transparency only and was not used to choose.</p>
       {spec.get('extra', '')}
       <div class="two">
         <div><h3>Per-class results (test)</h3>{table(["Class", "Precision", "Recall", "F1", "n"], cls_rows)}
@@ -304,7 +341,8 @@ def readiness_section():
         ["Confidence handling", "Temperature-calibrated probabilities; predictions below the review threshold are flagged <code>needs_review</code> per fruit"],
         ["Multiple fruits", "Touching fruits are split at their neck (watershed); 451/451 grading test images counted as exactly one fruit"],
         ["Pinned environment", "<code>requirements-lock.txt</code> (Python 3.12, TensorFlow 2.18.1 + tensorflow-metal)"],
-        ["Edge deployment", "TFLite float16 export with Keras parity check (<code>scripts/export_tflite.py</code>)"],
+        ["Edge deployment", "TFLite float16 export of the Keras models with a parity check (<code>scripts/export_tflite.py</code>). "
+                            "The DINOv3 probe members run in PyTorch (Apple GPU or CPU); they have no mobile export yet"],
         ["Reproducibility", "Fixed seeds, split files saved (<code>data/splits.csv</code>, <code>data/quality/*_index.csv</code>), every number in this report regenerated from metric files"],
       ])}
     </section>"""

@@ -1,0 +1,8 @@
+{
+  "runs": [
+    "effv2b0_260_v2"
+  ],
+  "temperature": 0.5602,
+  "review_threshold": 0.7899,
+  "target_accuracy": 0.99
+}

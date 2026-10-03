@@ -10,3 +10,6 @@ pandas
 remotezip
 joblib
 pytest
+torch>=2.4
+torchvision
+timm>=1.0.20

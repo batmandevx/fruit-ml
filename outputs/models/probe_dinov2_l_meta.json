@@ -1,0 +1,27 @@
+{
+  "data": "variety",
+  "C": 0.1,
+  "class_names": [
+    "Al-ajwa",
+    "Al-majdool",
+    "Al-masyihia",
+    "Al-meneifi",
+    "Al-muraaya",
+    "Al-sagai",
+    "Al-shagra",
+    "Al-shaishe",
+    "Al-skari",
+    "Al-skri_magrosh",
+    "Aseel",
+    "Fasli Toto",
+    "Gajar",
+    "Galaxy",
+    "Kupro",
+    "NbotAli",
+    "SagaiIRAQ"
+  ],
+  "model": "dinov2_l",
+  "timm": "vit_large_patch14_dinov2.lvd142m",
+  "img_size": 336,
+  "val_loss": 0.026747312396764755
+}

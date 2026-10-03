@@ -1,0 +1,9 @@
+{
+  "runs": [
+    "probe_dinov3_b",
+    "effv2b0_260_v2"
+  ],
+  "temperature": 1.0,
+  "review_threshold": 0.4096,
+  "target_accuracy": 0.99
+}

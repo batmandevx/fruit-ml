@@ -6,6 +6,8 @@ Usage:
   python src/train.py --backbone mobilenetv3
   python src/train.py --data grade --run grade_mnv3      # Phase 2 quality grade
   python src/train.py --backbone efficientnetv2s --img-size 384 --ft-layers 0 --ft-lr 1e-4 --run effv2s_384
+  python src/train.py --backbone efficientnetv2b0 --img-size 260 --init-from effv2b0_260 --run effv2b0_260_v2
+      # start from a trained run's backbone (new head, so the class list may differ)
 """
 import argparse
 import json
@@ -48,6 +50,7 @@ def main():
     ap.add_argument("--ft-layers", type=int, default=config.FINETUNE_LAST_N_LAYERS, help="0 = whole backbone")
     ap.add_argument("--ft-lr", type=float, default=config.FINETUNE_LR)
     ap.add_argument("--label-smoothing", type=float, default=0.0)
+    ap.add_argument("--init-from", help="run whose fine-tuned backbone weights to start from (same backbone and size)")
     ap.add_argument("--mixed-precision", action="store_true", help="float16 compute (GPU only)")
     args = ap.parse_args()
     img_size = args.img_size or BACKBONES[args.backbone][1]
@@ -65,6 +68,10 @@ def main():
     print(f"run={run} backbone={args.backbone} img={img_size} classes={class_names}")
 
     model = build_model(len(class_names), args.backbone, img_size)
+    if args.init_from:
+        src = tf.keras.models.load_model(config.MODEL_DIR / f"{args.init_from}_best.keras")
+        model.get_layer("backbone").set_weights(src.get_layer("backbone").get_weights())
+        print(f"backbone initialised from {args.init_from}")
     loss = tf.keras.losses.CategoricalCrossentropy(label_smoothing=args.label_smoothing)
     ckpt = config.MODEL_DIR / f"{run}_best.keras"
 

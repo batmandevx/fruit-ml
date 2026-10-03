@@ -1,0 +1,889 @@
+{
+  "name": "maturity_probe_dinov3_b_tta",
+  "split": "test",
+  "n": 463,
+  "loss": 0.9719510674476624,
+  "accuracy": 0.6997840172786177,
+  "f1_macro": 0.6968095872328186,
+  "f1_weighted": 0.695504626705482,
+  "top2_accuracy": 0.9740820734341252,
+  "accuracy_by_source": {
+    "alhamdan": 0.9777777777777777,
+    "morocco-kholt": 0.6698564593301436
+  },
+  "per_class": {
+    "Immature": {
+      "precision": 0.7350993377483444,
+      "recall": 0.9910714285714286,
+      "f1-score": 0.844106463878327,
+      "support": 112.0
+    },
+    "Khalal": {
+      "precision": 0.9375,
+      "recall": 0.6410256410256411,
+      "f1-score": 0.7614213197969543,
+      "support": 117.0
+    },
+    "Rutab": {
+      "precision": 0.59375,
+      "recall": 0.6333333333333333,
+      "f1-score": 0.6129032258064516,
+      "support": 120.0
+    },
+    "Tamar": {
+      "precision": 0.5961538461538461,
+      "recall": 0.543859649122807,
+      "f1-score": 0.5688073394495413,
+      "support": 114.0
+    },
+    "accuracy": 0.6997840172786177,
+    "macro avg": {
+      "precision": 0.7156257959755477,
+      "recall": 0.7023225130133025,
+      "f1-score": 0.6968095872328186,
+      "support": 463.0
+    },
+    "weighted avg": {
+      "precision": 0.7153999228711728,
+      "recall": 0.6997840172786177,
+      "f1-score": 0.695504626705482,
+      "support": 463.0
+    }
+  },
+  "misclassified": [
+    {
+      "file": "morocco-kholt__kholt__20220726_182628__1.jpg",
+      "true": "Immature",
+      "pred": "Khalal",
+      "conf": 0.398
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_135426__0.jpg",
+      "true": "Khalal",
+      "pred": "Rutab",
+      "conf": 0.521
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_140028__1.jpg",
+      "true": "Khalal",
+      "pred": "Rutab",
+      "conf": 0.558
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174725__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.555
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174725__2.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.931
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174736__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.981
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174736__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.988
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174750__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.895
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174750__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.867
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174750__2.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.969
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174800__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.992
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174800__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.963
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174800__2.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.953
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174809__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.618
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174824__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.95
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174824__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.962
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174833__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.521
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174842__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.547
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174842__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.983
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174849__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.522
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174855__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.689
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174902__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.999
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174902__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.549
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174911__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.651
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174919__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.959
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174919__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.984
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174930__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.957
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174930__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.782
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174930__2.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.986
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174941__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.834
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174947__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.548
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174947__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.853
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_174947__3.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.999
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175002__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.987
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175002__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.706
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175008__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.869
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175008__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.748
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175013__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.903
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175022__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.879
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175035__1.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.917
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175047__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.917
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175101__0.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.851
+    },
+    {
+      "file": "morocco-kholt__kholt__20220901_175101__2.jpg",
+      "true": "Khalal",
+      "pred": "Immature",
+      "conf": 0.821
+    },
+    {
+      "file": "alhamdan__Rutab Date (100).jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.678
+    },
+    {
+      "file": "morocco-kholt__kholt__20220918_143124__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.932
+    },
+    {
+      "file": "morocco-kholt__kholt__20220918_143156__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.824
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121249__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.527
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121249__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.67
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121249__2.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.93
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121314__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.719
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121337__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.745
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121356__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.758
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121423__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.943
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121423__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.866
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121443__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.931
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121503__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.595
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121554__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.99
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121616__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.972
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121644__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.954
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_121843__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.914
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122546__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.743
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122546__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.974
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122603__1.jpg",
+      "true": "Rutab",
+      "pred": "Khalal",
+      "conf": 0.501
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122603__2.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.794
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122623(0)__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.982
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122638__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.892
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122638__2.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.734
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122708__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.854
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122723__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.518
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122723__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.864
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122734__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.88
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122750__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.868
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122800(0)__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.99
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122800(0)__2.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.755
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122816__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.938
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122816__2.jpg",
+      "true": "Rutab",
+      "pred": "Khalal",
+      "conf": 0.946
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122832__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.464
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122844__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.387
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122903__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.649
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122903__1.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.565
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122903__2.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.998
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122922__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.518
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_122941__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.604
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_123012__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.919
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_123047__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.747
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_123112__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.764
+    },
+    {
+      "file": "morocco-kholt__kholt__20220925_123140__0.jpg",
+      "true": "Rutab",
+      "pred": "Tamar",
+      "conf": 0.985
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_170526__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.549
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_170630__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.981
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_170819__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.556
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_171542__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.737
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_171815__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.806
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_171840__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.533
+    },
+    {
+      "file": "morocco-kholt__kholt__20221008_171928__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.675
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154644__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.844
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154644__2.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.516
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154712__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.697
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154712__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.827
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154742__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.969
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154805__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.911
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154805__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.992
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154805__2.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.999
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154837__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.998
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154902__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.999
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_154941__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.988
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_155931__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.992
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_155931__2.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.938
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160020__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.994
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160037__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.89
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160110__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.608
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160131__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.974
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160158__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.964
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160231__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.834
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160231__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.999
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160256__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 1.0
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160324__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.999
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160342__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 1.0
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160342__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.98
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160412__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.992
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160412__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.967
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160433__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.889
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160458__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.907
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160537__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.98
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160537__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 1.0
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160555__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.849
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160704__0.jpg",
+      "true": "Tamar",
+      "pred": "Khalal",
+      "conf": 0.773
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160725__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.612
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160751__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.836
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160751__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 1.0
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160751__2.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.966
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160825__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.998
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160853__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.904
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160919__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.935
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160940__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.95
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_160940__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.795
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_161003__0.jpg",
+      "true": "Tamar",
+      "pred": "Khalal",
+      "conf": 0.603
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_161003__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.98
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_161027__0.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.982
+    },
+    {
+      "file": "morocco-kholt__kholt__20221011_161027__1.jpg",
+      "true": "Tamar",
+      "pred": "Rutab",
+      "conf": 0.913
+    }
+  ]
+}

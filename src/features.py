@@ -75,6 +75,16 @@ def _clean(fruit):
     return cv2.drawContours(fruit, contours, -1, 255, cv2.FILLED)
 
 
+def remove_background(rgb):
+    """Everything outside the (slightly dilated) fruit mask set to the median background colour."""
+    fruit = cv2.dilate(segment_fruit(rgb), np.ones((9, 9), np.uint8)) > 0
+    if not fruit.any() or fruit.all():
+        return rgb
+    out = rgb.copy()
+    out[~fruit] = np.median(rgb[~fruit], 0)
+    return out
+
+
 def color_name(h_deg, s, v):
     if v < 0.18 or (v < 0.33 and s < 0.35):
         return "black / very dark brown"

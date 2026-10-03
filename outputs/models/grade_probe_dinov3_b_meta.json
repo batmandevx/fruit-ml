@@ -1,0 +1,13 @@
+{
+  "data": "grade",
+  "C": 0.01,
+  "class_names": [
+    "Grade-1",
+    "Grade-2",
+    "Grade-3"
+  ],
+  "model": "dinov3_b",
+  "timm": "vit_base_patch16_dinov3.lvd1689m",
+  "img_size": 336,
+  "val_loss": 0.385794073343277
+}

@@ -1,0 +1,369 @@
+{
+  "name": "grade_probe_dinov3_b+grade_mnv3+grade_effv2b0_tta",
+  "split": "val",
+  "n": 451,
+  "loss": 0.33069240177083564,
+  "accuracy": 0.8824833702882483,
+  "f1_macro": 0.8590023592854735,
+  "f1_weighted": 0.8853716827452308,
+  "top2_accuracy": 0.9933481152993349,
+  "accuracy_by_source": {
+    "Aseel": 1.0,
+    "Fasli-Toto": 1.0,
+    "Gajar": 0.8163265306122449,
+    "Kupro": 0.860655737704918
+  },
+  "per_class": {
+    "Grade-1": {
+      "precision": 0.9678714859437751,
+      "recall": 0.9026217228464419,
+      "f1-score": 0.9341085271317829,
+      "support": 267.0
+    },
+    "Grade-2": {
+      "precision": 0.725,
+      "recall": 0.8285714285714286,
+      "f1-score": 0.7733333333333333,
+      "support": 105.0
+    },
+    "Grade-3": {
+      "precision": 0.8536585365853658,
+      "recall": 0.8860759493670886,
+      "f1-score": 0.8695652173913043,
+      "support": 79.0
+    },
+    "accuracy": 0.8824833702882483,
+    "macro avg": {
+      "precision": 0.848843340843047,
+      "recall": 0.8724230335949863,
+      "f1-score": 0.8590023592854735,
+      "support": 451.0
+    },
+    "weighted avg": {
+      "precision": 0.8913208672665895,
+      "recall": 0.8824833702882483,
+      "f1-score": 0.8853716827452308,
+      "support": 451.0
+    }
+  },
+  "misclassified": [
+    {
+      "file": "Gajar__Large__107.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.665
+    },
+    {
+      "file": "Gajar__Large__109.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.591
+    },
+    {
+      "file": "Gajar__Large__115.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.537
+    },
+    {
+      "file": "Gajar__Large__119.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.478
+    },
+    {
+      "file": "Gajar__Large__14.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.397
+    },
+    {
+      "file": "Gajar__Large__140.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.661
+    },
+    {
+      "file": "Gajar__Large__17.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.71
+    },
+    {
+      "file": "Gajar__Large__19.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.822
+    },
+    {
+      "file": "Gajar__Large__26.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.615
+    },
+    {
+      "file": "Gajar__Large__44.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.779
+    },
+    {
+      "file": "Gajar__Large__60.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.695
+    },
+    {
+      "file": "Gajar__Large__61.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.493
+    },
+    {
+      "file": "Gajar__Large__98.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.52
+    },
+    {
+      "file": "Gajar__Medium__11.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.912
+    },
+    {
+      "file": "Gajar__Medium__192.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.492
+    },
+    {
+      "file": "Gajar__Medium__32.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.49
+    },
+    {
+      "file": "Gajar__Medium__46.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.609
+    },
+    {
+      "file": "Gajar__Medium__48.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.731
+    },
+    {
+      "file": "Gajar__Medium__50.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.523
+    },
+    {
+      "file": "Gajar__Medium__52.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.482
+    },
+    {
+      "file": "Gajar__Medium__52.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.616
+    },
+    {
+      "file": "Gajar__Medium__69.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.565
+    },
+    {
+      "file": "Gajar__Medium__72.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.555
+    },
+    {
+      "file": "Gajar__Small__110.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.707
+    },
+    {
+      "file": "Gajar__Small__118.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.563
+    },
+    {
+      "file": "Gajar__Small__124.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.506
+    },
+    {
+      "file": "Gajar__Small__126.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-1",
+      "conf": 0.433
+    },
+    {
+      "file": "Gajar__Small__13.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.455
+    },
+    {
+      "file": "Gajar__Small__130.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.583
+    },
+    {
+      "file": "Gajar__Small__131.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.583
+    },
+    {
+      "file": "Gajar__Small__172.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.552
+    },
+    {
+      "file": "Gajar__Small__26.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.603
+    },
+    {
+      "file": "Gajar__Small__3.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-3",
+      "conf": 0.4
+    },
+    {
+      "file": "Gajar__Small__50.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.533
+    },
+    {
+      "file": "Gajar__Small__58.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.488
+    },
+    {
+      "file": "Gajar__Small__61.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.669
+    },
+    {
+      "file": "Kupro__Large__108.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.515
+    },
+    {
+      "file": "Kupro__Large__142.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.705
+    },
+    {
+      "file": "Kupro__Large__20.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.582
+    },
+    {
+      "file": "Kupro__Large__228.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.901
+    },
+    {
+      "file": "Kupro__Large__242.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.503
+    },
+    {
+      "file": "Kupro__Large__249.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.577
+    },
+    {
+      "file": "Kupro__Large__255.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.575
+    },
+    {
+      "file": "Kupro__Large__277.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.561
+    },
+    {
+      "file": "Kupro__Large__29.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.509
+    },
+    {
+      "file": "Kupro__Large__29.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.51
+    },
+    {
+      "file": "Kupro__Large__3.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.531
+    },
+    {
+      "file": "Kupro__Large__312.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-3",
+      "conf": 0.611
+    },
+    {
+      "file": "Kupro__Large__353.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.538
+    },
+    {
+      "file": "Kupro__Large__47.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.769
+    },
+    {
+      "file": "Kupro__Large__63.jpg",
+      "true": "Grade-2",
+      "pred": "Grade-1",
+      "conf": 0.733
+    },
+    {
+      "file": "Kupro__Large__77.jpg",
+      "true": "Grade-3",
+      "pred": "Grade-2",
+      "conf": 0.801
+    },
+    {
+      "file": "Kupro__Large__90.jpg",
+      "true": "Grade-1",
+      "pred": "Grade-2",
+      "conf": 0.52
+    }
+  ]
+}

@@ -10,7 +10,12 @@
 T and the threshold are written to outputs/models/<name>_calib.json (name = runs
 joined by "+"); grade.py reads them. Several runs are calibrated as an ensemble.
 
+With --from-probs the TTA probabilities saved by evaluate.py / probe.py / ensemble.py
+(outputs/eval/probs/) are used instead, so PyTorch probes and mixed ensembles work too;
+score the ensemble on val and test with ensemble.py first.
+
 Usage: python src/calibrate.py --run grade_mnv3 grade_effv2b0 [--target 0.98]
+       python src/calibrate.py --run probe_dinov3_b effv2b0_260_v2 --from-probs
 """
 import argparse
 import json
@@ -22,6 +27,7 @@ from scipy.optimize import minimize_scalar
 import config
 from data import load_split
 from evaluate import load_run, predict_probs
+from metrics import load_probs
 
 
 def scale(probs, T):
@@ -59,11 +65,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", nargs="+", required=True)
     ap.add_argument("--target", type=float, default=0.98, help="accuracy wanted on auto-accepted predictions")
+    ap.add_argument("--from-probs", action="store_true", help="use saved TTA probabilities instead of the Keras models")
     args = ap.parse_args()
 
     name = config.run_name(args.run)
     out = {"val": [[], None], "test": [[], None]}
-    for run in args.run:
+    if args.from_probs:
+        saved = f"{name}_tta"
+        for split in ("val", "test"):
+            p, y, _, _ = load_probs(saved, split)
+            out[split] = [[p], y]
+    for run in [] if args.from_probs else args.run:
         model, meta = load_run(run)
         for split in ("val", "test"):
             ds = load_split(split, meta["img_size"], data_dir=config.DATASETS[meta.get("data", "variety")])
@@ -73,7 +85,11 @@ def main():
     out = {s: (np.mean(p, axis=0), y) for s, (p, y) in out.items()}
 
     pv, yv = out["val"]
-    T = float(minimize_scalar(lambda t: nll(scale(pv, t), yv), bounds=(0.05, 10), method="bounded").x)
+    # With almost no validation errors the NLL keeps falling as T -> 0, so T can't be estimated: keep T = 1.
+    if (pv.argmax(1) != yv).sum() < 5:
+        T = 1.0
+    else:
+        T = float(minimize_scalar(lambda t: nll(scale(pv, t), yv), bounds=(0.05, 10), method="bounded").x)
     cal = {s: scale(p, T) for s, (p, _) in out.items()}
 
     # lowest threshold reaching the target on val (more coverage = less manual work)

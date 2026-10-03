@@ -1,0 +1,72 @@
+{
+  "run": "probe_dinov3_b_bgaug+effv2b0_260_v2",
+  "temperature": 1.0,
+  "val": {
+    "nll_before": 0.0823,
+    "nll_after": 0.0823,
+    "ece_before": 0.0686,
+    "ece_after": 0.0686
+  },
+  "test": {
+    "accuracy": 0.9951,
+    "nll_before": 0.1024,
+    "nll_after": 0.1024,
+    "ece_before": 0.0758,
+    "ece_after": 0.0758
+  },
+  "review": {
+    "target_accuracy": 0.99,
+    "threshold": 0.4343,
+    "test_coverage": 0.9976,
+    "test_accuracy_on_accepted": 0.9951,
+    "test_sent_to_review": 1,
+    "n_test": 411
+  },
+  "test_coverage_curve": [
+    {
+      "threshold": 0.0,
+      "coverage": 1.0,
+      "accuracy": 0.9951
+    },
+    {
+      "threshold": 0.5,
+      "coverage": 0.998,
+      "accuracy": 0.9951
+    },
+    {
+      "threshold": 0.6,
+      "coverage": 0.968,
+      "accuracy": 0.995
+    },
+    {
+      "threshold": 0.7,
+      "coverage": 0.956,
+      "accuracy": 0.9975
+    },
+    {
+      "threshold": 0.8,
+      "coverage": 0.91,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.85,
+      "coverage": 0.883,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.9,
+      "coverage": 0.839,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.95,
+      "coverage": 0.528,
+      "accuracy": 1.0
+    },
+    {
+      "threshold": 0.98,
+      "coverage": 0.002,
+      "accuracy": 1.0
+    }
+  ]
+}
