@@ -8,10 +8,18 @@ __pycache__/
 .DS_Store
 
 # Datasets: third-party, ~8.5 GB. Re-create with the download/prepare scripts (see README).
-data/
+data/*
+# split definitions and the maturity zip index are small and not re-downloadable
+!data/splits.csv
+!data/quality/
+data/quality/*
+!data/quality/grading_index.csv
+!data/quality/maturity_index.csv
+!data/maturity/
+data/maturity/*
+!data/maturity/zip_index.json
 
 # Training logs and ad-hoc runs
-outputs/logs/
 outputs/predictions/
 outputs/quality/reports/
 

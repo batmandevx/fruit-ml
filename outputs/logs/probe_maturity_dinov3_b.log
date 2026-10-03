@@ -1,0 +1,137 @@
+  dinov3_b maturity/train: 0/1371
+  dinov3_b maturity/train: 640/1371
+  dinov3_b maturity/train: 1280/1371
+  dinov3_b maturity/val: 0/295
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: divide by zero encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: overflow encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: invalid value encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: divide by zero encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: overflow encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: invalid value encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: divide by zero encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: overflow encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: invalid value encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: divide by zero encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: overflow encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: invalid value encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: divide by zero encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: overflow encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: invalid value encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: divide by zero encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: overflow encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:222: RuntimeWarning: invalid value encountered in matmul
+  raw_prediction = X @ weights_xp.T + intercept_xp
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: divide by zero encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: overflow encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/linear_model/_linear_loss.py:368: RuntimeWarning: invalid value encountered in matmul
+  grad_X = grad_pointwise.T @ X
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+/Users/ayush/Downloads/date-fruit-quality-ml/.venv-metal/lib/python3.12/site-packages/sklearn/utils/extmath.py:229: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+  dinov3_b maturity: C=0.003  val_loss=0.2076 val_acc=0.9424
+  dinov3_b maturity: C=0.01   val_loss=0.1722 val_acc=0.9492
+  dinov3_b maturity: C=0.03   val_loss=0.1597 val_acc=0.9525
+  dinov3_b maturity: C=0.1    val_loss=0.1599 val_acc=0.9593
+  dinov3_b maturity: C=0.3    val_loss=0.1784 val_acc=0.9525
+  dinov3_b maturity: C=1.0    val_loss=0.2173 val_acc=0.9492
+              precision    recall  f1-score   support
+
+    Immature      0.956     0.970     0.963        67
+      Khalal      0.971     0.930     0.950        71
+       Rutab      0.950     0.950     0.950        80
+       Tamar      0.937     0.961     0.949        77
+
+    accuracy                          0.953       295
+   macro avg      0.953     0.953     0.953       295
+weighted avg      0.953     0.953     0.953       295
+
+[maturity_probe_dinov3_b_tta | val] {'loss': 0.1597, 'accuracy': 0.9525, 'f1_macro': 0.9528, 'f1_weighted': 0.9525, 'top2_accuracy': 0.9966}
+accuracy by source: {'alhamdan': 0.9778, 'morocco-boufagous': 0.9444, 'morocco-bouisthami': 0.9643, 'morocco-boumajhoul': 0.9242}

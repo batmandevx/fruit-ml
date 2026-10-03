@@ -1,0 +1,33 @@
+run=grade_ft_dinov3_b model=dinov3_b img=336 classes=['Grade-1', 'Grade-2', 'Grade-3'] train=2102 val=451
+epoch 1/25 loss=1.1115 acc=0.3364 val_loss=0.8930 val_acc=0.6031 424s *
+epoch 2/25 loss=0.9441 acc=0.5301 val_loss=0.5493 val_acc=0.7849 398s *
+epoch 3/25 loss=0.8341 acc=0.6823 val_loss=0.5334 val_acc=0.7738 402s *
+epoch 4/25 loss=0.7799 acc=0.7180 val_loss=0.4388 val_acc=0.8692 534s *
+epoch 5/25 loss=0.7493 acc=0.7657 val_loss=0.4995 val_acc=0.8160 1779s
+epoch 6/25 loss=0.7157 acc=0.7891 val_loss=0.4863 val_acc=0.8514 400s
+epoch 7/25 loss=0.7045 acc=0.7882 val_loss=0.4100 val_acc=0.8692 394s *
+epoch 8/25 loss=0.6889 acc=0.8034 val_loss=0.3890 val_acc=0.8670 660s *
+epoch 9/25 loss=0.6751 acc=0.8144 val_loss=0.4002 val_acc=0.8736 401s
+epoch 10/25 loss=0.6697 acc=0.8235 val_loss=0.4104 val_acc=0.8670 1411s
+epoch 11/25 loss=0.6577 acc=0.8220 val_loss=0.4071 val_acc=0.8581 394s
+epoch 12/25 loss=0.6522 acc=0.8330 val_loss=0.3872 val_acc=0.8736 395s *
+epoch 13/25 loss=0.6416 acc=0.8349 val_loss=0.4378 val_acc=0.8537 395s
+epoch 14/25 loss=0.6254 acc=0.8406 val_loss=0.4080 val_acc=0.8625 396s
+epoch 15/25 loss=0.6174 acc=0.8593 val_loss=0.4107 val_acc=0.8603 396s
+epoch 16/25 loss=0.6087 acc=0.8588 val_loss=0.4386 val_acc=0.8581 411s
+epoch 17/25 loss=0.5906 acc=0.8607 val_loss=0.4129 val_acc=0.8625 400s
+epoch 18/25 loss=0.5869 acc=0.8702 val_loss=0.4376 val_acc=0.8647 1361s
+early stop
+saved /Users/ayush/Downloads/date-fruit-quality-ml/outputs/models/grade_ft_dinov3_b_ft.pt  best epoch 12 val_acc=0.8736 val_loss=0.3872
+              precision    recall  f1-score   support
+
+     Grade-1      0.946     0.925     0.936       267
+     Grade-2      0.711     0.771     0.740       105
+     Grade-3      0.868     0.835     0.852        79
+
+    accuracy                          0.874       451
+   macro avg      0.842     0.844     0.842       451
+weighted avg      0.878     0.874     0.875       451
+
+[grade_ft_dinov3_b_tta | val] {'loss': 0.3872, 'accuracy': 0.8736, 'f1_macro': 0.8423, 'f1_weighted': 0.8753, 'top2_accuracy': 0.9911}
+accuracy by source: {'Aseel': 1.0, 'Fasli-Toto': 1.0, 'Gajar': 0.7806, 'Kupro': 0.8852}

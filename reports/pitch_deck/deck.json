@@ -1,0 +1,14 @@
+{"v":4,"createdOnFiles":{"v":1,"at":"2026-10-01T09:30:00Z"},"lists":"css","title":"Date Fruit AI Grading — Company Pitch",
+"order":["cover","problem","solution","results","gains","howitworks","whydino","license","terms","stack","risk","xai","shortcut","rigor","limits","roadmap","ask","refs","sources","appendix"],
+"sections":{
+"s1":{"description":"The opportunity: manual date grading and what the system replaces","start":"cover"},
+"s2":{"description":"Results on held-out test data, and the gain over the previous model","start":"results"},
+"s3":{"description":"How the system works and why it is built on DINOv3","start":"howitworks"},
+"s4":{"description":"Licensing: DINOv3, the full software stack and the training data are cleared for commercial use, with two items to settle","start":"license"},
+"s5":{"description":"Trust: explainability checks, the shortcut we caught, the evaluation method and honest limits","start":"xai"},
+"s6":{"description":"Next steps: a pilot on the company's own fruit","start":"roadmap"},
+"s7":{"description":"References, licences, datasets and detailed metrics","start":"refs"}},
+"faces":{
+"libre-baskerville":{"family":"Libre Baskerville","href":"https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"},
+"ibm-plex-sans":{"family":"IBM Plex Sans","href":"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"}},
+"designSystems":[]}

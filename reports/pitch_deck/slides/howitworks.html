@@ -1,0 +1,19 @@
+<section id="howitworks" style="background:#F8F4EC;color:#22170F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<p style="font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8A4E0F">How it works</p>
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:64px;font-weight:700;line-height:1.15">Two complementary models vote on every fruit</h2>
+<div style="display:flex;align-items:center;gap:16px">
+<div style="width:260px;background:#FFFDF8;border:1px solid #D9CBB4;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">Photo</h3><p style="font-size:24px;color:#5B4A3C">fruit, tray or bag</p></div>
+<x-shape kind="arrow-right" style="background:#B8741A;width:56px;height:28px"></x-shape>
+<div style="width:280px;background:#FFFDF8;border:1px solid #D9CBB4;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">Separate fruits</h3><p style="font-size:24px;color:#5B4A3C">segmentation, one crop per fruit</p></div>
+<x-shape kind="arrow-right" style="background:#B8741A;width:56px;height:28px"></x-shape>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px">
+<div style="background:#22170F;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:30px;font-weight:600;color:#D9A441">DINOv3 foundation model</h3><p style="font-size:24px;color:#E9DCC8">Meta AI, 2025 · frozen · reads the fruit's structure</p></div>
+<div style="background:#22170F;border-radius:16px;padding:28px 32px;display:flex;flex-direction:column;gap:8px"><h3 style="font-size:30px;font-weight:600;color:#D9A441">EfficientNetV2 network</h3><p style="font-size:24px;color:#E9DCC8">Google, 2021 · fine-tuned on date photos</p></div>
+</div>
+<x-shape kind="arrow-right" style="background:#B8741A;width:56px;height:28px"></x-shape>
+<div style="width:300px;background:#FFFDF8;border:2px solid #B8741A;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:10px"><h3 style="font-size:30px;font-weight:600">Averaged answer</h3><p style="font-size:24px;color:#5B4A3C">calibrated confidence; low confidence goes to an inspector</p></div>
+</div>
+<p style="font-size:28px;line-height:1.45;color:#5B4A3C;width:1600px">Size, colour, defects, skin and weight are measured directly from the fruit outline and pixels. A printed 30 mm marker in the photo gives sizes in millimetres.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8C7B6B">Grade uses an ensemble of two CNNs (MobileNetV3 + EfficientNetV2-B0) · 6</p>
+<aside>Two different kinds of model, a transformer pretrained on a huge image collection and a convolutional network trained on our date photos, make different mistakes; averaging them is more reliable than either. One DINOv3 pass serves both variety and ripeness, so the extra cost is small. The confidence is calibrated (temperature scaling) so a low score really means "check this one".</aside>
+</section>

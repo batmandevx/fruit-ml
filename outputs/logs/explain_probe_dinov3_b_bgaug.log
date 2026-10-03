@@ -1,0 +1,33 @@
+Al-ajwa: 26 images
+Al-majdool: 20 images
+Al-masyihia: 5 images
+Al-meneifi: 35 images
+Al-muraaya: 8 images
+Al-sagai: 32 images
+Al-shagra: 4 images
+Al-shaishe: 26 images
+Al-skari: 49 images
+Al-skri_magrosh: 10 images
+Aseel: 26 images
+Fasli Toto: 24 images
+Gajar: 35 images
+Galaxy: 28 images
+Kupro: 32 images
+NbotAli: 41 images
+SagaiIRAQ: 10 images
+{
+  "spearman_vs_random_head": 0.0757,
+  "spearman_vs_random_all": -0.4248,
+  "deletion_drop_cam": 0.1502,
+  "deletion_drop_random": 0.0573,
+  "cam_energy_on_fruit": 0.3903,
+  "fruit_area_fraction": 0.3266,
+  "verdict": {
+    "depends_on_learned_weights": true,
+    "faithful_deletion": true,
+    "focuses_on_fruit": true,
+    "robust_to_background_removal": true
+  },
+  "accuracy_original": 0.9927,
+  "accuracy_background_removed": 0.9854
+}

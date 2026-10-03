@@ -1,0 +1,28 @@
+<section id="results" data-transition="fade" style="background:#EFE7D9;color:#22170F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<p style="font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8A4E0F">Results · held-out test data, scored once</p>
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:64px;font-weight:700;line-height:1.15">Accuracy on photos the system never saw</h2>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#22170F;padding:48px 40px;border-radius:20px">
+<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:96px;font-weight:700;color:#D9A441;line-height:1">99.5%</p>
+<h3 style="font-size:34px;font-weight:600;color:#F8F4EC">Variety</h3>
+<p style="font-size:24px;line-height:1.4;color:#E9DCC8">17 varieties · 2 errors in 411 test photos</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFDF8;padding:48px 40px;border-radius:20px;border:1px solid #D9CBB4">
+<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:96px;font-weight:700;color:#22170F;line-height:1">84.5%</p>
+<h3 style="font-size:34px;font-weight:600">Quality grade</h3>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C">97.6% on the 47% of fruit it accepts automatically</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFDF8;padding:48px 40px;border-radius:20px;border:1px solid #D9CBB4">
+<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:96px;font-weight:700;color:#22170F;line-height:1">80.3%</p>
+<h3 style="font-size:34px;font-weight:600">Size class</h3>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C">Small / Medium / Large from the fruit outline</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFDF8;padding:48px 40px;border-radius:20px;border:1px solid #D9CBB4">
+<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:96px;font-weight:700;color:#22170F;line-height:1">100%</p>
+<h3 style="font-size:34px;font-weight:600">Ripeness</h3>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C">on single studio fruits; 70.0% on an unseen variety</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8C7B6B">Public datasets; models chosen on a separate validation split. Full figures: appendix and evaluation report · 4</p>
+<aside>Key message: every number is on a test set kept aside until the end and scored once. Grade: the system knows when it is unsure. It auto-accepts 47% of fruit at 97.6% accuracy and routes the rest to an inspector. Ripeness: 100% on studio photos of single fruits (Rutab vs Tamar); 70% when tested on a whole variety the model never saw, which is the hard case.</aside>
+</section>

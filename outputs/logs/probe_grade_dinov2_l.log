@@ -1,0 +1,7 @@
+  dinov2_l grade/train: 0/2102
+  dinov2_l grade/train: 640/2102
+  dinov2_l grade/train: 1280/2102
+  dinov2_l grade/train: 1920/2102
+  dinov2_l grade/val: 0/451
+/Users/ayush/.local/share/uv/python/cpython-3.12.14-macos-aarch64-none/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 32 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

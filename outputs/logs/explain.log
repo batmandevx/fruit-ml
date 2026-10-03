@@ -1,0 +1,13 @@
+{
+  "spearman_vs_random_head": 0.1078,
+  "spearman_vs_random_all": 0.0165,
+  "deletion_drop_cam": 0.5662,
+  "deletion_drop_random": 0.296,
+  "cam_energy_on_fruit": 0.6186,
+  "fruit_area_fraction": 0.2798,
+  "verdict": {
+    "depends_on_learned_weights": true,
+    "faithful_deletion": true,
+    "focuses_on_fruit": true
+  }
+}

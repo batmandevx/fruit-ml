@@ -1,0 +1,17 @@
+variety            Gajar                   Kupro                
+grade            Grade-1 Grade-2 Grade-3 Grade-1 Grade-2 Grade-3
+crack_pct          0.007   0.033   0.157   0.009   0.007   0.041
+black_spot_pct     0.008   0.056   0.259   0.006   0.004   0.020
+insect_hole_pct    0.011   0.043   0.186   0.003   0.003   0.011
+sunburn_pct        0.000   0.000   0.000   0.014   0.000   0.000
+mold_pct           0.105   0.042   0.068   1.586   1.084   0.368
+total_defect_pct   0.132   0.175   0.670   1.618   1.099   0.441
+sugar_spot_pct     1.101   1.147   1.190   0.966   1.207   1.665
+wrinkle_index      0.076   0.075   0.061   0.049   0.058   0.069
+gloss_index        0.129   0.058   0.024   0.511   0.342   0.147
+color_uniformity   0.403   0.402   0.402   0.384   0.382   0.373 
+
+Spearman(feature, grade number):
+        crack_pct  black_spot_pct  insect_hole_pct  sunburn_pct  mold_pct  total_defect_pct  sugar_spot_pct  wrinkle_index  gloss_index  color_uniformity
+Gajar      0.309           0.477            0.594          NaN    -0.053             0.525           0.085         -0.253       -0.312            -0.006
+Kupro      0.083           0.063            0.153        -0.04    -0.211            -0.181           0.280          0.346       -0.225            -0.081

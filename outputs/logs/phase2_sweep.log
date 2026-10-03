@@ -1,0 +1,4 @@
+01:17 start grade
+02:37 done grade: saved /Users/ayush/Downloads/date-fruit-quality-ml/outputs/models/grade_effv2b0_best.keras  best val_acc=0.8780 val_loss=0.5080
+02:37 start maturity
+03:18 done maturity: saved /Users/ayush/Downloads/date-fruit-quality-ml/outputs/models/maturity_effv2b0_best.keras  best val_acc=0.9492 val_loss=0.4687

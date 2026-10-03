@@ -1,0 +1,67 @@
+('boufagous', 'S1'): 911 labelled, sampling 60
+('boufagous', 'S2'): 557 labelled, sampling 60
+('boufagous', 'S3'): 1647 labelled, sampling 60
+('boufagous', 'S4'): 1173 labelled, sampling 60
+('bouisthami', 'S1'): 95 labelled, sampling 60
+('bouisthami', 'S2'): 135 labelled, sampling 60
+('bouisthami', 'S3'): 45 labelled, sampling 45
+('bouisthami', 'S4'): 82 labelled, sampling 60
+('boumajhoul', 'S1'): 303 labelled, sampling 60
+('boumajhoul', 'S2'): 572 labelled, sampling 60
+('boumajhoul', 'S3'): 1315 labelled, sampling 60
+('boumajhoul', 'S4'): 423 labelled, sampling 60
+('kholt', 'S1'): 139 labelled, sampling 60
+('kholt', 'S2'): 414 labelled, sampling 60
+('kholt', 'S3'): 639 labelled, sampling 60
+('kholt', 'S4'): 557 labelled, sampling 60
+Boufagous.zip: 20/120 images, 10 crops
+Boumajhoul.zip: 20/120 images, 29 crops
+Boufagous2.zip: 20/60 images, 25 crops
+kholt.zip: 20/240 images, 38 crops
+Boumajhoul2.zip: 20/120 images, 30 crops
+Boufagous3.zip: 20/60 images, 32 crops
+bouisthami.zip: 20/225 images, 62 crops
+Boufagous.zip: 40/120 images, 38 crops
+Boumajhoul.zip: 40/120 images, 57 crops
+Boufagous2.zip: 40/60 images, 57 crops
+Boumajhoul2.zip: 40/120 images, 57 crops
+kholt.zip: 40/240 images, 84 crops
+Boufagous3.zip: 40/60 images, 60 crops
+bouisthami.zip: 40/225 images, 117 crops
+kholt.zip: 60/240 images, 112 crops
+Boufagous.zip: 60/120 images, 74 crops
+Boufagous2.zip: 60/60 images, 90 crops
+Boufagous3.zip: 60/60 images, 92 crops
+Boumajhoul.zip: 60/120 images, 97 crops
+Boumajhoul2.zip: 60/120 images, 95 crops
+kholt.zip: 80/240 images, 156 crops
+Boufagous.zip: 80/120 images, 117 crops
+bouisthami.zip: 60/225 images, 168 crops
+Boumajhoul2.zip: 80/120 images, 128 crops
+Boumajhoul.zip: 80/120 images, 131 crops
+Boufagous.zip: 100/120 images, 145 crops
+kholt.zip: 100/240 images, 192 crops
+Boumajhoul2.zip: 100/120 images, 157 crops
+bouisthami.zip: 80/225 images, 235 crops
+Boumajhoul.zip: 100/120 images, 161 crops
+Boufagous.zip: 120/120 images, 188 crops
+kholt.zip: 120/240 images, 229 crops
+Boumajhoul2.zip: 120/120 images, 183 crops
+Boumajhoul.zip: 120/120 images, 192 crops
+bouisthami.zip: 100/225 images, 298 crops
+kholt.zip: 140/240 images, 264 crops
+bouisthami.zip: 120/225 images, 358 crops
+kholt.zip: 160/240 images, 294 crops
+kholt.zip: 180/240 images, 327 crops
+bouisthami.zip: 140/225 images, 420 crops
+kholt.zip: 200/240 images, 357 crops
+bouisthami.zip: 160/225 images, 493 crops
+bouisthami.zip: 180/225 images, 530 crops
+kholt.zip: 220/240 images, 389 crops
+bouisthami.zip: 200/225 images, 573 crops
+bouisthami.zip: 220/225 images, 608 crops
+kholt.zip: 240/240 images, 418 crops
+Immature 490
+Khalal 516
+Rutab 428
+Tamar 397

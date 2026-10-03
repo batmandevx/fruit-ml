@@ -1,0 +1,23 @@
+<section id="xai" data-transition="fade" style="background:#F8F4EC;color:#22170F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8A4E0F">Trust · explainability</p>
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:56px;font-weight:700;line-height:1.15">Every prediction shows where the model looked</h2>
+<div style="display:flex;gap:48px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:12px">
+<img src="/_blob/1e5ffdd0a624855dedb113592c67ac88" alt="A Fasli Toto date: the photo, the Grad-CAM heatmap covering the fruit, and a randomised-model control whose heat falls on the background" style="width:1040px;height:332px;object-fit:contain">
+<div style="display:flex;gap:21px">
+<p style="width:332px;font-size:24px;color:#5B4A3C">Photo (Fasli Toto, 99%)</p>
+<p style="width:332px;font-size:24px;color:#5B4A3C">Grad-CAM: heat on the fruit</p>
+<p style="width:332px;font-size:24px;color:#5B4A3C">Control: random weights</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<h3 style="font-size:30px;font-weight:600">4 sanity checks, all passed</h3>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C"><b style="color:#22170F">Learned, not edges:</b> map unrelated to a random model</p>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C"><b style="color:#22170F">Faithful:</b> blurring hot areas drops confidence 0.150 vs 0.057</p>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C"><b style="color:#22170F">On the fruit:</b> 39% of heat on 33% of the image</p>
+<p style="font-size:24px;line-height:1.4;color:#5B4A3C"><b style="color:#22170F">Not the background:</b> 98.5% with it removed</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8C7B6B">Variety model, DINOv3 member, 411 test photos. Methods: Grad-CAM, Grad-CAM++, SmoothGrad; Adebayo et al. 2018 · 12</p>
+<aside>Grad-CAM colours the parts of the photo that drove the decision. We don't just show pretty heatmaps; we test them. The model-randomisation test (Adebayo et al., NeurIPS 2018) checks the map comes from what the model learned. The deletion test checks that hiding the hot regions really changes the prediction. Fruit focus and the background-removal test check the model looks at the fruit. Every production model passes; the full galleries are in the evaluation report.</aside>
+</section>

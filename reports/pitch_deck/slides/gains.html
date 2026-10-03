@@ -1,0 +1,15 @@
+<section id="gains" style="background:#F8F4EC;color:#22170F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:64px;font-weight:700;line-height:1.15">Modern foundation models cut variety errors from 16 to 2</h2>
+<table style="font-size:30px;color:#22170F;width:1664px">
+<tr><th style="width:28%;text-align:left">Component</th><th style="width:18%;text-align:right">Previous model</th><th style="width:18%;text-align:right">Current model</th><th style="width:36%;text-align:left">What changed</th></tr>
+<tr><td>Variety (17 classes)</td><td style="text-align:right">96.1%</td><td style="text-align:right"><b>99.5%</b></td><td>DINOv3 probe + EfficientNet ensemble</td></tr>
+<tr><td>Ripeness (unseen variety)</td><td style="text-align:right">67.8%</td><td style="text-align:right"><b>70.0%</b></td><td>Same ensemble design</td></tr>
+<tr><td>Quality grade</td><td style="text-align:right">84.5%</td><td style="text-align:right">84.5%</td><td>Kept: 3 modern alternatives tested, none better</td></tr>
+<tr><td>Size class</td><td style="text-align:right">80.3%</td><td style="text-align:right">80.3%</td><td>Unchanged (outline geometry)</td></tr>
+</table>
+<div style="display:flex;gap:24px;align-items:center;background:#FFFDF8;border-left:8px solid #B8741A;padding:32px 40px;border-radius:8px">
+<p style="font-size:28px;line-height:1.45;color:#5B4A3C">We report the grade honestly: a fully fine-tuned DINOv3 reached 87.4% on validation vs 89.8% for the current ensemble. Three model families stopping at 87–90% points to the subjective Grade 1 / Grade 2 boundary in the labels, not the model.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8C7B6B">Test accuracy; previous = EfficientNetV2-B0 / CNN ensemble trained on the same data · 5</p>
+<aside>Variety: 16 errors out of 411 test photos before, 2 now. Grade: we tried a frozen DINOv3 probe (80–83% on validation), a full DINOv3 fine-tune (87.4%) and ensembles; none beat the CNN ensemble (89.8% on validation), so it stayed. This is a strength of the process: we only switch when validation says so.</aside>
+</section>

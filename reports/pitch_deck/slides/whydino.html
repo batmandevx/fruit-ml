@@ -1,0 +1,17 @@
+<section id="whydino" style="background:#F8F4EC;color:#22170F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<p style="font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8A4E0F">Why DINOv3</p>
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:64px;font-weight:700;line-height:1.15">A state-of-the-art vision model, used as a ready-made eye</h2>
+<div style="display:flex;gap:56px">
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Released by Meta AI, August 2025</h3><p style="font-size:26px;line-height:1.4;color:#5B4A3C">Siméoni et al., "DINOv3", arXiv:2508.10104. Code and weights public on GitHub and Hugging Face.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Self-supervised on the LVD-1689M web image set</h3><p style="font-size:26px;line-height:1.4;color:#5B4A3C">Learned from images alone, no labels: general visual features that transfer to new domains.</p></div>
+<div style="display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">We use the ViT-B/16 version, 86M parameters</h3><p style="font-size:26px;line-height:1.4;color:#5B4A3C">Frozen, with a small classifier on top: trains in minutes on a laptop GPU from a few thousand photos.</p></div>
+</div>
+<div style="width:620px;display:flex;flex-direction:column;justify-content:center;gap:28px;background:#22170F;border-radius:20px;padding:56px">
+<p style="font-family:'Libre Baskerville', Georgia, serif;font-size:34px;font-style:italic;line-height:1.45;color:#F8F4EC">"…a versatile vision foundation model that outperforms the specialized state of the art across a broad range of settings, without fine-tuning."</p>
+<p style="font-size:24px;color:#D9A441">DINOv3 paper abstract, 2025</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8C7B6B">On our validation data: DINOv3 probe alone 99.0% vs best fine-tuned CNN 97.6% (variety) · 7</p>
+<aside>Plain-language version: instead of teaching a network to see from scratch with our few thousand date photos, we reuse a model that already learned general vision from a very large image collection, and only train a small final layer for dates. That is why accuracy jumped while training took minutes. We also tested DINOv2 (Large) and DINOv3 (Large); the Base model was as accurate and far smaller, so we use it.</aside>
+</section>

@@ -1,0 +1,14 @@
+<section id="appendix" style="background:#F8F4EC;color:#22170F;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<p style="font-size:26px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#8A4E0F">Appendix</p>
+<h2 style="font-family:'Libre Baskerville', Georgia, serif;font-size:52px;font-weight:700;line-height:1.15">Detailed test results</h2>
+<table style="font-size:26px;color:#22170F;width:1664px">
+<tr><th style="width:20%;text-align:left">Component</th><th style="width:10%;text-align:right">Test n</th><th style="width:13%;text-align:right">Accuracy</th><th style="width:13%;text-align:right">Macro-F1</th><th style="width:11%;text-align:right">Loss</th><th style="width:33%;text-align:left">With manual review</th></tr>
+<tr><td>Variety</td><td style="text-align:right">411</td><td style="text-align:right">99.5%</td><td style="text-align:right">0.994</td><td style="text-align:right">0.102</td><td>99.5% on 99.8% accepted</td></tr>
+<tr><td>Quality grade</td><td style="text-align:right">451</td><td style="text-align:right">84.5%</td><td style="text-align:right">0.813</td><td style="text-align:right">0.371</td><td>97.6% on 47% accepted</td></tr>
+<tr><td>Size class</td><td style="text-align:right">330</td><td style="text-align:right">80.3%</td><td style="text-align:right">–</td><td style="text-align:right">–</td><td>–</td></tr>
+<tr><td>Ripeness</td><td style="text-align:right">463</td><td style="text-align:right">70.0%</td><td style="text-align:right">0.696</td><td style="text-align:right">0.727</td><td>Not reliable on a new variety</td></tr>
+</table>
+<p style="font-size:26px;line-height:1.45;color:#5B4A3C;width:1600px">Loss is cross-entropy with 4-flip test-time augmentation. Ripeness test = the whole Kholt variety (never trained on) plus held-out studio fruits (100%). Variety test includes 117 grading-rig, 226 studio and 68 web photos.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#8C7B6B">Source: reports/model_report.pdf · 19</p>
+<aside>For technical questions. Every number here is generated from the metric files by scripts/build_report.py.</aside>
+</section>
